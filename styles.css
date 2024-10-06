@@ -727,7 +727,6 @@ p {
 /* Stile card */
 .cliente-card {
     background-color: #fff;
-    position: relative;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
@@ -782,12 +781,10 @@ p {
 }
 
 .badges {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    margin-top: 20px;
 }
 
 .badge {
@@ -807,12 +804,103 @@ p {
 }
 
 /* Colori Material Design personalizzati per i badge */
+/* Badge per Flutter */
+.badge-flutter {
+    background-color: #02569B;
+    color: #fff;
+}
+
+/* Badge per Kotlin */
+.badge-kotlin {
+    background-color: #7F52FF;
+    color: #fff;
+}
+
+/* Badge per Swift */
+.badge-swift {
+    background-color: #FA7343;
+    color: #fff;
+}
+
+/* Badge per REST API */
+.badge-restapi {
+    background-color: #009688;
+    color: #fff;
+}
+
+/* Badge per Analisi Architetturale - C4 Model */
+.badge-architettura {
+    background-color: #607D8B;
+    color: #fff;
+}
+
+/* Badge per Django */
+.badge-django {
+    background-color: #092E20;
+    color: #fff;
+}
+
+/* Badge per Spring Boot */
+.badge-springboot {
+    background-color: #6DB33F;
+    color: #fff;
+}
+
+/* Badge per MySQL */
+.badge-mysql {
+    background-color: #00758F;
+    color: #fff;
+}
+
+/* Badge per Oracle */
+.badge-oracle {
+    background-color: #F80000;
+    color: #fff;
+}
+
+/* Badge per Maven */
+.badge-maven {
+    background-color: #C71A36;
+    color: #fff;
+}
+
 .badge-java { background-color: #F5F5F5; color: #FF6F00; } /* Java - Arancione soft */
 .badge-springboot { background-color: #E8F5E9; color: #2E7D32; } /* Spring Boot - Verde */
 .badge-oracle { background-color: #FFEBEE; color: #D32F2F; } /* Oracle - Rosso tenue */
-.badge-hibernate { background-color: #ECEFF1; color: #455A64; } /* Hibernate - Grigio Bluastro */
+.badge-architettura { background-color: #ECEFF1; color: #455A64; } /* Architettura - Grigio Bluastro */
 .badge-maven { background-color: #FFF8E1; color: #FBC02D; } /* Maven - Giallo tenue */
-.badge-webapp { background-color: #E3F2FD; color: #0288D1; } /* WebApp - Azzurro tenue */
+.badge-restapi { background-color: #E3F2FD; color: #0288D1; } /* RestAPI - Azzurro tenue */
+
+/* Flutter */
+.badge-flutter {
+background-color: #E1F5FE; /* Azzurro chiarissimo */
+    color: #039BE5; /* Blu leggero */
+}
+
+/* Kotlin */
+.badge-kotlin {
+    background-color: #F3E5F5; /* Viola chiarissimo */
+    color: #7B1FA2; /* Viola più intenso */
+}
+
+/* Swift */
+.badge-swift {
+    background-color: #FFF3E0; /* Arancio chiarissimo */
+    color: #FB8C00; /* Arancio più scuro */
+}
+
+/* MySQL */
+.badge-mysql {
+    background-color: #E0F7FA; /* Blu pastello leggero */
+    color: #006064; /* Blu più intenso */
+}
+
+/* Django */
+.badge-django {
+    background-color: #E8EAF6; /* Blu-viola chiarissimo */
+    color: #3949AB; /* Blu-viola più intenso */
+}
+
 
 /* Icona personalizzabile */
 .badge::before {
