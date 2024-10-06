@@ -223,7 +223,7 @@ body {
     /* Sposta il testo verso l'alto */
 }
 
-.hero h1 {
+.hero strong {
     font-size: 82px;
     /* Dimensione del titolo */
     margin-bottom: 1rem;
@@ -280,7 +280,7 @@ body {
 
 /* Dimensioni del testo per dispositivi mobili */
 @media (max-width: 759px) {
-    .hero h1 {
+    .hero strong {
         font-size: 60px;
         /* Dimensione del titolo per mobile */
     }
@@ -298,15 +298,10 @@ section {
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
 
 p {
     font-size: 1.2rem;
 }
-
 
 
 /* Sezione Siamo */
@@ -359,8 +354,9 @@ p {
     /* Allinea il testo a sinistra */
     font-size: 2.5rem;
     /* Dimensione del titolo */
-    font-weight: bold;
+    font-weight: 500;
     /* Grassetto */
+    margin-bottom: 1rem;
 }
 
 /* Griglia per la sezione Facciamo */
@@ -387,7 +383,7 @@ p {
     color: #F57C00;
 }
 
-.facciamo-text h3 {
+.facciamo-text h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 500;
@@ -438,7 +434,7 @@ p {
         /* Dispone l'icona sopra il testo sui dispositivi mobili */
     }
 
-    .facciamo-text h3 {
+    .facciamo-text h1 {
         margin-left: 80px;
     }
 
@@ -631,7 +627,7 @@ p {
     /* Spazio per lasciare spazio all'icona di sfondo */
 }
 
-.scegliamo-text h3 {
+.scegliamo-text h1 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 500;
@@ -778,6 +774,10 @@ p {
 #tis {
     border-left: 4px solid #702F8A;
     /* Bordo viola per TIS */
+}
+
+#tis-logo-container {
+   margin-bottom: 20px;
 }
 
 .badges {
