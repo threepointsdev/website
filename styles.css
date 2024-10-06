@@ -1,0 +1,948 @@
+/* Stile generico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Cambiato in Roboto */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    /* Altezza della navbar */
+    background-color: #000;
+    color: #fff;
+    z-index: 100;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    /* Spaziatura tra logo e menu */
+    align-items: center;
+    height: 100%;
+    /* Centra il contenuto verticalmente */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* Dimensioni del testo per dispositivi mobili */
+@media (max-width: 1200px) {
+    .navbar-content {
+        padding: 20px;
+    }
+}
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+/* Menu desktop */
+.menu-desktop {
+    display: none;
+}
+
+.menu-desktop a {
+    color: #fff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.menu-desktop a:hover {
+    text-decoration: underline;
+}
+
+/* Menu mobile */
+.menu-mobile {
+    display: block;
+    position: relative;
+    /* Necessario per il posizionamento del bottone */
+}
+
+.menu-toggle {
+    background-color: #000;
+    /* Sfondo nero per l'icona del menu */
+    border: none;
+    /* Rimuove il bordo */
+    color: white;
+    /* Colore dell'icona */
+    cursor: pointer;
+    /* Mostra il cursore a mano */
+    padding: 10px;
+    /* Padding per rendere più cliccabile */
+    border-radius: 5px;
+    /* Arrotonda gli angoli del pulsante */
+}
+
+.menu-mobile-items {
+    position: fixed;
+    /* Fisso per coprire lo schermo */
+    top: 0;
+    /* Inizia dall'alto della finestra */
+    right: -100%;
+    /* Inizialmente nascosto a destra */
+    height: 100%;
+    /* Copre tutta l'altezza */
+    width: 80%;
+    /* Larghezza della finestra del menu */
+    background-color: #000;
+    transition: right 0.3s ease;
+    /* Animazione di apertura */
+    padding: 20px;
+    /* Padding interno */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    /* Leggera ombra per effetto */
+    z-index: 200;
+    /* Assicura che sia sopra gli altri elementi */
+}
+
+.menu-mobile-items.open {
+    right: 0;
+    /* Sposta a sinistra per mostrare il menu */
+}
+
+.menu-mobile-items a {
+    display: block;
+    color: #fff;
+    padding: 0.75rem 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.menu-mobile-items a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Chiudi il menu */
+.close-menu {
+    background: none;
+    /* Nessuno sfondo */
+    border: none;
+    /* Rimuove il bordo */
+    color: #fff;
+    /* Colore dell'icona */
+    font-size: 2rem;
+    /* Dimensione dell'icona */
+    cursor: pointer;
+    /* Mostra il cursore a mano */
+    top: 20px;
+    /* Margine dall'alto */
+    left: 20px;
+    /* Margine da sinistra */
+}
+
+/* Posizionamento del footer in basso nel menu mobile */
+.menu-mobile-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+ 
+}
+
+
+/* Posizionamento del footer in basso nel menu mobile */
+.menu-mobile-footer p {
+   
+    font-size: 1rem;
+}
+
+
+.menu-mobile-footer a{
+    color: #F57C00;
+}
+
+/* Quando il menu è aperto, mostriamo il footer */
+.menu-mobile.open .menu-mobile-footer {
+    right: 0;
+}
+
+
+/* Sezione Hero */
+.hero {
+    min-height: 100vh;
+    padding: 100px 20px;
+    position: relative;
+    height: calc(100vh - 80px);
+    /* Altezza pari a quella della finestra meno l'altezza della navbar */
+    background-image: url('images/heroImage.webp');
+    /* Inserisci qui il percorso dell'immagine */
+    background-size: cover;
+    /* Copre completamente */
+    background-position: center;
+    /* Centra l'immagine */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    /* Velo scuro sopra l'immagine */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    /* Supporto per i browser moderni */
+    z-index: 1;
+    /* Assicura che sia sopra l'immagine di sfondo */
+}
+
+.hero-content {
+    position: relative;
+    /* Necessario per sovrapporre il testo */
+    z-index: 2;
+    /* Assicura che il testo sia sopra il velo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Occupa tutta l'altezza della sezione */
+    text-align: center;
+    color: #fff;
+    /* Colore del testo */
+    margin-top: -70px;
+    /* Sposta il testo verso l'alto */
+}
+
+.hero h1 {
+    font-size: 82px;
+    /* Dimensione del titolo */
+    margin-bottom: 1rem;
+    /* Spazio sotto il titolo */
+}
+
+.hero p {
+    font-size: 32px;
+    /* Dimensione del paragrafo */
+    font-weight: 300;
+}
+
+.scroll-arrow {
+    position: relative;
+    /* Necessario per sovrapporre il testo */
+    z-index: 2;
+    /* Assicura che il testo sia sopra il velo */
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* Distanza dal bordo inferiore della sezione */
+    animation: bounce 2s infinite;
+    /* Applicazione dell'animazione di oscillazione */
+    display: flex;
+    justify-content: center;
+    /* Centra orizzontalmente l'icona */
+}
+
+/* Animazione di oscillazione */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        /* Posizione iniziale e finale */
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Oscilla di 10px verso l'alto */
+    }
+}
+
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+    .menu-desktop {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: none;
+    }
+}
+
+/* Dimensioni del testo per dispositivi mobili */
+@media (max-width: 759px) {
+    .hero h1 {
+        font-size: 60px;
+        /* Dimensione del titolo per mobile */
+    }
+
+    .hero p {
+        font-size: 22px;
+        /* Dimensione del sottotitolo per mobile */
+    }
+}
+
+
+
+/* Contenuto pagina */
+section {
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+
+
+/* Sezione Siamo */
+
+#siamo p {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+    font-weight: 300;
+}
+
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+    #siamo {
+        padding: 100px;
+
+    }
+
+    .siamo-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+}
+
+/* Stili per desktop e tablet */
+@media(max-width: 759px) {
+    #siamo {
+        padding: 100px 19px;
+        /* Padding sui lati per dispositivi piccoli */
+    }
+
+    .siamo-section-content {
+        max-width: 90%;
+        /* Riduci la larghezza massima per creare più spazio attorno al testo */
+        margin: 0 auto;
+        /* Centra il contenuto */
+    }
+}
+
+/* Sezione Facciamo */
+#facciamo {
+    background-color: #f4f4f4;
+
+}
+
+.section-title {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+    font-size: 2.5rem;
+    /* Dimensione del titolo */
+    font-weight: bold;
+    /* Grassetto */
+}
+
+/* Griglia per la sezione Facciamo */
+.facciamo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Due colonne */
+    grid-gap: 40px;
+    /* Spazio tra gli elementi */
+    margin-top: 40px;
+    text-align: left;
+}
+
+.facciamo-item {
+    display: flex;
+    /* Disposizione a sinistra-destra tra icona e testo */
+    align-items: flex-start;
+    /* Allinea le icone in alto */
+}
+
+.facciamo-item span {
+    font-size: 50px;
+    margin-right: 20px;
+    color: #F57C00;
+}
+
+.facciamo-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.facciamo-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+    /* Elimina il margine extra */
+}
+
+@media (max-width: 447px) {
+    #innovationicon {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 461px) {
+    #devops {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 397px) {
+
+    #container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 759px) {
+
+    #microservizi {
+        margin-top: -10px;
+    }
+}
+
+/* Stili per dispositivi mobili */
+@media (max-width: 759px) {
+    .facciamo-grid {
+        grid-template-columns: 1fr;
+        /* Una colonna su dispositivi mobili */
+    }
+
+    .facciamo-item {
+        flex-direction: column;
+        /* Dispone l'icona sopra il testo sui dispositivi mobili */
+    }
+
+    .facciamo-text h3 {
+        margin-left: 80px;
+    }
+
+
+    .facciamo-item span {
+        position: absolute;
+    }
+
+    .facciamo-icon {
+
+        /* Stili per desktop e tablet */
+        @media(min-width: 759px) {
+            .menu-desktop {
+                display: flex;
+            }
+
+            .menu-mobile {
+                display: none;
+            }
+        }
+
+        margin-right: 0;
+        margin-bottom: 10px;
+        /* Spazio tra l'icona e il testo sui dispositivi mobili */
+    }
+}
+
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+
+    #facciamo {
+        padding: 100px;
+
+    }
+
+    .facciamo-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+}
+
+/* Stili per desktop e tablet */
+@media(max-width: 759px) {
+
+    #facciamo {
+        padding: 100px 19px;
+        /* Padding sui lati per dispositivi piccoli */
+    }
+
+
+    .facciamo-section-content {
+        max-width: 90%;
+        /* Riduci la larghezza massima per creare più spazio attorno al testo */
+        margin: 0 auto;
+        /* Centra il contenuto */
+    }
+
+}
+
+
+
+/* Sezione Scegliamo */
+
+
+.scegliamo-section-content {
+    text-align: left;
+}
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+    #scegliamo {
+        padding: 100px;
+    }
+
+    .scegliamo-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+}
+
+/* Stili per desktop e tablet */
+@media(max-width: 759px) {
+    #scegliamo {
+        padding: 100px 19px;
+        /* Padding sui lati per dispositivi piccoli */
+    }
+
+    .scegliamo-section-content {
+        max-width: 90%;
+        /* Riduci la larghezza massima per creare più spazio attorno al testo */
+        margin: 0 auto;
+        /* Centra il contenuto */
+    }
+}
+
+
+/* Stili per dispositivi mobili */
+@media (max-width: 1367px) {
+    .scegliamo-grid {
+        grid-template-columns: 1fr;
+        /* Una colonna su dispositivi mobili */
+    }
+
+    .scegliamo-item {
+        grid-row: auto;
+        /* Riga 1 */
+    }
+}
+
+
+/* Stili per dispositivi mobili */
+@media (max-width: 1367px) {
+    .scegliamo-item {
+        margin-bottom: 30px;
+        /* Riga 1 */
+    }
+}
+
+
+/* Stili per dispositivi mobili */
+@media (min-width: 1367px) {
+    .scegliamo-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        /* Due colonne */
+    }
+
+
+    /* Specifica le posizioni delle celle occupate */
+    .scegliamo-item:nth-child(1) {
+        grid-column: 1 / 2;
+        /* Colonna 1 */
+        grid-row: 1 / 2;
+        /* Riga 1 */
+    }
+
+    .scegliamo-item:nth-child(2) {
+        grid-column: 2 / 3;
+        /* Colonna 2 */
+        grid-row: 2 / 3;
+        /* Riga 2 */
+    }
+
+    .scegliamo-item:nth-child(3) {
+        grid-column: 1 / 2;
+        /* Colonna 1 */
+        grid-row: 3 / 4;
+        /* Riga 3 */
+    }
+
+    .scegliamo-item:nth-child(4) {
+        grid-column: 2 / 3;
+        /* Colonna 2 */
+        grid-row: 4 / 5;
+        /* Riga 4 */
+    }
+
+}
+
+
+.scegliamo-grid {
+    display: grid;
+    /* Quattro righe */
+    margin-top: 40px;
+}
+
+/* Stile per gli elementi della griglia */
+.scegliamo-item {
+    position: relative;
+    background-color: #fff;
+    /* Sfondo bianco */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.scegl-icon {
+    font-size: 120px;
+    position: absolute;
+    color: #F57C00;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scegliamo-text {
+    margin-left: 150px;
+    /* Spazio per lasciare spazio all'icona di sfondo */
+}
+
+.scegliamo-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.scegliamo-text p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+    /* Elimina il margine extra */
+}
+
+/* Media queries per dispositivi mobili */
+@media (max-width: 759px) {
+    .scegliamo-grid {
+        grid-template-columns: 1fr;
+        /* Una colonna su dispositivi mobili */
+        grid-template-rows: repeat(4, auto);
+        /* Una riga per ogni elemento */
+    }
+
+    .scegliamo-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .scegliamo-text {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .scegl-icon {
+        position: static;
+        font-size: 80px;
+        transform: none;
+        margin-bottom: -10px;
+    }
+}
+
+
+/* Sezione Clienti */
+#clienti {
+    background-color: #f4f4f4;
+    /* Sfondo leggero per distinguere la sezione */
+}
+
+.clienti-section-content {
+    text-align: left;
+    /* Allinea il testo a sinistra */
+}
+
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+    #clienti {
+        padding: 100px;
+
+    }
+
+    .clienti-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+}
+
+/* Stili per desktop e tablet */
+@media(max-width: 759px) {
+    #clienti {
+        padding: 100px 19px;
+        /* Padding sui lati per dispositivi piccoli */
+    }
+
+    .clienti-section-content {
+        max-width: 90%;
+        /* Riduci la larghezza massima per creare più spazio attorno al testo */
+        margin: 0 auto;
+        /* Centra il contenuto */
+    }
+}
+
+
+/* Card in colonna con più spazio */
+.clienti-cards {
+    display: flex;
+    flex-direction: column;
+    /* Dispone le card in colonna */
+    gap: 40px;
+    /* Aumentato lo spazio tra le card */
+}
+
+/* Stile card */
+.cliente-card {
+    background-color: #fff;
+    position: relative;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Aggiunge un'ombra leggera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Animazione al hover */
+}
+
+/* Effetto hover */
+.cliente-card:hover {
+    transform: translateY(-10px);
+    /* Solleva la card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Ombra più intensa al hover */
+}
+
+/* Stile del logo */
+.cliente-card-logo-container {
+    height: 80px;
+}
+
+.cliente-logo {
+    width: 160px;
+    /* Dimensione dell'icona del logo */
+    margin-bottom: 15px;
+}
+
+.cliente-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.cliente-description {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Bordo personalizzato per le diverse card */
+#imolainformatica {
+    border-left: 4px solid #13a538;
+}
+
+#apuacom {
+    border-left: 4px solid rgba(232, 63, 66, 1);
+}
+
+#tis {
+    border-left: 4px solid #702F8A;
+    /* Bordo viola per TIS */
+}
+
+.badges {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.badge {
+    background-color: #E0E0E0; /* Colore neutro ispirato al Material Design */
+    color: #424242; /* Testo scuro per leggibilità */
+    padding: 6px 10px;
+    margin: 3px;
+    border-radius: 12px; /* Angoli arrotondati ma meno accentuati */
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Ombra leggera */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Colori Material Design personalizzati per i badge */
+.badge-java { background-color: #F5F5F5; color: #FF6F00; } /* Java - Arancione soft */
+.badge-springboot { background-color: #E8F5E9; color: #2E7D32; } /* Spring Boot - Verde */
+.badge-oracle { background-color: #FFEBEE; color: #D32F2F; } /* Oracle - Rosso tenue */
+.badge-hibernate { background-color: #ECEFF1; color: #455A64; } /* Hibernate - Grigio Bluastro */
+.badge-maven { background-color: #FFF8E1; color: #FBC02D; } /* Maven - Giallo tenue */
+.badge-webapp { background-color: #E3F2FD; color: #0288D1; } /* WebApp - Azzurro tenue */
+
+/* Icona personalizzabile */
+.badge::before {
+    content: "⚙️"; /* Simbolo semplice */
+    margin-right: 5px;
+    font-size: 12px;
+    color: #757575;
+}
+
+
+/* Stile responsive per clienti su dispositivi mobili */
+@media (max-width: 759px) {
+    .clienti-cards {
+        flex-direction: column;
+        /* Già disposte in colonna, nessun cambiamento necessario */
+        gap: 20px;
+    }
+
+    .cliente-card {
+        max-width: 100%;
+        /* Le card occupano tutta la larghezza su mobile */
+    }
+}
+
+
+/* Sezione Contatti */
+
+
+.contattaci-section-content {
+    text-align: left;
+}
+
+
+
+/* Stili per desktop e tablet */
+@media(min-width: 759px) {
+    #contattaci {
+        padding: 100px;
+
+    }
+
+    .contattaci-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+
+}
+
+/* Stili per desktop e tablet */
+@media(max-width: 759px) {
+    #contattaci {
+        padding: 100px 19px;
+        /* Padding sui lati per dispositivi piccoli */
+    }
+
+    .contattaci-section-content {
+        max-width: 90%;
+        /* Riduci la larghezza massima per creare più spazio attorno al testo */
+        margin: 0 auto;
+        /* Centra il contenuto */
+    }
+}
+
+
+#contattaci p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+#contattaci a {
+    color: #F57C00;
+    /* Colore arancione */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+#contattaci a:hover {
+    text-decoration: underline;
+    /* Sottolinea il link al passaggio del mouse */
+}
+
+
+/* Footer */
+.footer {
+    background-color: #000;
+    /* Sfondo nero */
+    color: #fff;
+    /* Testo bianco */
+    padding: 50px 20px;
+    /* Spaziatura interna */
+    text-align: center;
+    /* Testo centrato */
+}
+
+.footer-menu {
+    margin-bottom: 20px;
+    /* Distanza dal resto del contenuto */
+}
+
+.footer-menu a {
+    color: #fff;
+    /* Colore del link bianco */
+    margin: 0 15px;
+    /* Spaziatura orizzontale tra i link */
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+    /* Sottolineatura al passaggio del mouse */
+}
+
+.footer-info p {
+    margin: 5px 0;
+    /* Spaziatura verticale minima tra i paragrafi */
+    font-size: 1rem;
+    opacity: .8;
+}
+
+.footer-info a {
+    color: #F57C00;
+    /* Colore arancione */
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    /* Sottolinea il link al passaggio del mouse */
+}
