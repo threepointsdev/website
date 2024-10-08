@@ -343,6 +343,10 @@ p {
     }
 }
 
+.siamo-section-content p {
+    margin-top: 40px;
+}
+
 /* Sezione Facciamo */
 #facciamo {
     background-color: #f4f4f4;
@@ -537,8 +541,7 @@ p {
 /* Stili per dispositivi mobili */
 @media (max-width: 1367px) {
     .scegliamo-grid {
-        grid-template-columns: 1fr;
-        /* Una colonna su dispositivi mobili */
+        grid-row-gap: 40px;
     }
 
     .scegliamo-item {
@@ -560,9 +563,7 @@ p {
 /* Stili per dispositivi mobili */
 @media (min-width: 1367px) {
     .scegliamo-grid {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(4, 1fr);
-        /* Due colonne */
+        grid-row-gap: 40px;
     }
 
 
@@ -717,6 +718,7 @@ p {
     flex-direction: column;
     /* Dispone le card in colonna */
     gap: 40px;
+    margin-top: 60px;
     /* Aumentato lo spazio tra le card */
 }
 
@@ -933,7 +935,9 @@ background-color: #E1F5FE; /* Azzurro chiarissimo */
     text-align: left;
 }
 
-
+.contattaci-section-content p {
+    margin-top: 40px;
+}
 
 /* Stili per desktop e tablet */
 @media(min-width: 759px) {

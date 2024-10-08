@@ -4,24 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Threepoints - Consulenza Informatica e Sviluppo Software</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <meta name="description" content="Servizi di consulenza informatica e sviluppo software specializzati in innovazione applicativa, microservizi, DevOps e automazione.
+    <meta name="description"
+        content="Servizi di consulenza informatica e sviluppo software specializzati in innovazione applicativa, microservizi, DevOps e automazione.
     Supportiamo le aziende nella crescita digitale, offrendo soluzioni IT su misura e affiancandole per affrontare le sfide tecnologiche con agilità e competenza.">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
+
     <!-- Google Font -->
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    rel="stylesheet">
-  
+
     <!-- Google Icons -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <!-- Precaricamento dello script JavaScript -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="styles.css">
+    </noscript>
+
+    <!-- Precaricamento dello script JavaScript -->
+    <link rel="preload" href="script.js" as="script">
     <script defer src="script.js"></script>
 </head>
 
@@ -55,7 +65,7 @@
             <a href="#clienti">Clienti</a>
             <a href="#contattaci">Contattaci</a>
 
-             <!-- Aggiungo il contenitore per la scritta "pippo" -->
+            <!-- Aggiungo il contenitore per la scritta "pippo" -->
             <div class="menu-mobile-footer" id="menu-mobile-footer">
                 <p>© All Rights Reserved.</p>
                 <p>THREEPOINTS di Andrea Poggi.</p>
@@ -85,7 +95,7 @@
             <div class="section-title">
                 <strong>Siamo</strong>
             </div>
-           
+
             <p>Una giovane realtà nel mondo della consulenza informatica, nata dalla passione e dall'energia di
                 professionisti con anni di esperienza in grandi contesti aziendali. Sebbene la nostra azienda sia appena
                 nata, il nostro team porta con sé competenze consolidate, maturate in progetti complessi all'interno di
@@ -111,13 +121,15 @@
                 <!-- Prima colonna della prima riga -->
                 <div class="facciamo-item">
                     <span class="material-symbols-outlined" id="innovationicon">bolt</span>
-                   
+
                     <div class="facciamo-text">
                         <h1>Application Innovation</h1>
                         <p>Aiutiamo le aziende a migliorare le loro applicazioni esistenti o a svilupparne di nuove. Non
                             abbiamo uno standard tecnologico predefinito da offrire ai nostri clienti, ma analizziamo
-                            attentamente ogni contesto e, sulla base di questo, scegliamo lo stack tecnologico più adatto.
-                            Non è il business a doversi adattare alle tecnologie, ma sono le tecnologie a doversi adattare al
+                            attentamente ogni contesto e, sulla base di questo, scegliamo lo stack tecnologico più
+                            adatto.
+                            Non è il business a doversi adattare alle tecnologie, ma sono le tecnologie a doversi
+                            adattare al
                             business!</p>
                     </div>
                 </div>
@@ -125,13 +137,14 @@
                 <!-- Seconda colonna della prima riga -->
                 <div class="facciamo-item">
                     <span class="material-symbols-outlined" id="microservizi">stack</span>
-        
+
                     <div class="facciamo-text">
                         <h1>Microservizi</h1>
                         <p>Costruire applicazioni moderne richiede architetture flessibili e modulari. Con i
                             microservizi, suddividiamo le applicazioni in componenti indipendenti, che possono essere
                             sviluppati, distribuiti e gestiti separatamente. Questo approccio consente un'elevata
-                            scalabilità, una maggiore resilienza, una manutenibilità migliore e cicli di rilascio più rapidi.</p>
+                            scalabilità, una maggiore resilienza, una manutenibilità migliore e cicli di rilascio più
+                            rapidi.</p>
                     </div>
                 </div>
 
@@ -150,7 +163,7 @@
                 <!-- Seconda colonna della seconda riga -->
                 <div class="facciamo-item">
                     <span class="material-symbols-outlined" id="container">dashboard</span>
-       
+
                     <div class="facciamo-text">
                         <h1>Container Oriented</h1>
                         <p>Utilizziamo container Docker per isolare e gestire le applicazioni in ambienti modulari e
@@ -168,7 +181,7 @@
             <div class="section-title">
                 <strong>Scegliamo</strong>
             </div>
-           
+
             <div class="scegliamo-grid">
                 <!-- Posizione (0,0) -->
                 <div class="scegliamo-item">
@@ -196,7 +209,7 @@
                 <div class="scegliamo-item">
                     <span class="material-symbols-outlined scegl-icon">
                         groups
-                        </span>
+                    </span>
                     <div class="scegliamo-text">
                         <h1>La condivisione della conoscenza</h1>
                         <p>Il nostro obiettivo è anche rendere i nostri clienti autonomi. Ci impegniamo a trasferire le
@@ -229,12 +242,12 @@
             <div class="section-title">
                 <strong>Clienti</strong>
             </div>
-          
+
             <div class="clienti-cards">
-                <div class="cliente-card" id="imolainformatica" >
+                <div class="cliente-card" id="imolainformatica">
                     <div class="cliente-card-logo-container">
                         <a href="https://imolainformatica.it/" target="_blank">
-                            <img src="images/imola.jpg" alt="Logo Cliente 1" class="cliente-logo">
+                            <img src="images/imola.webp" alt="ImolaInformatica" class="cliente-logo">
                         </a>
                     </div>
                     <strong class="cliente-title">ImolaInformatica</strong>
@@ -242,7 +255,7 @@
                         fine di individuare i componenti su cui poter effettuare ottimizzazioni e modernizzazioni.
                         Implementazione delle migliorie.
                     </p>
-                     <!-- Badges -->
+                    <!-- Badges -->
                     <div class="badges">
                         <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
                         <h1 class="badge badge-springboot">Spring Boot</h1>
@@ -251,19 +264,20 @@
                         <h1 class="badge badge-restapi">REST API</h1>
                     </div>
                 </div>
-                <div class="cliente-card" id="apuacom" >
+                <div class="cliente-card" id="apuacom">
                     <div class="cliente-card-logo-container">
                         <a href="https://www.apuacom.it/" target="_blank">
-                            <img src="images/logoapuacom.png" alt="Logo Cliente 2" class="cliente-logo" style="margin-top: 15px;">
+                            <img src="images/logoapuacom.webp" alt="Apuacom" class="cliente-logo"
+                                style="margin-top: 15px;">
                         </a>
-                </div>
+                    </div>
                     <strong class="cliente-title">Apuacom</strong>
                     <p class="cliente-description">
                         Analisi architeturale del sistema informatico aziendale AS-IS con architettura a monolite per
                         evolvere in un architettura a microservizi.
                         Rifattorizzazione monolite e implementazione nuovi microservizi.
                     </p>
-                      <!-- Badges -->
+                    <!-- Badges -->
                     <div class="badges">
                         <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
                         <h1 class="badge badge-django">Django</h1>
@@ -272,10 +286,10 @@
                         <h1 class="badge badge-restapi">REST API</h1>
                     </div>
                 </div>
-                <div class="cliente-card" id = "tis">
-                    <div class="cliente-card-logo-container" id = "tis-logo-container">
+                <div class="cliente-card" id="tis">
+                    <div class="cliente-card-logo-container" id="tis-logo-container">
                         <a href="https://www.trusttis.com/" target="_blank">
-                             <img src="images/tis.png" alt="Logo Cliente 3" class="cliente-logo" style="
+                            <img src="images/tis.webp" alt="TIS" class="cliente-logo" style="
                                 background-color: rgb(231, 231, 231);
                                 border-radius: 5px;
                                 padding: 10px">
@@ -284,7 +298,8 @@
                     <strong class="cliente-title">TIS</strong>
                     <p class="cliente-description">Sviluppo di un'app mobile multi-platform progettata per integrarsi
                         con strumenti sanitari tramite connessione Bluetooth. L'applicazione
-                        permette agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati dagli strumenti
+                        permette agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati dagli
+                        strumenti
                         collegati e inviando i risultati degli esami a un server per essere analizzati.</p>
                     <!-- Badges -->
                     <div class="badges">
