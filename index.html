@@ -52,6 +52,19 @@
             /* Cambiato in Roboto */
             line-height: 1.6;
         }
+
+        #loading-screen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            z-index: 1000; /* Assicurati che sia sopra tutto */
+        }
+
+
     </style>
 
     <!-- Precaricamento dello script JavaScript -->
@@ -67,8 +80,11 @@
 
 <body>
 
-    <!-- Schermata di caricamento -->
+    <!-- Schermata di caricamento
+         Uso uno stile inline per evitare ritardi nella renderizzazioni. 
+    -->
     <div id="loading-screen">
+
         <div class="icon-container">
             <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <!-- Cerchio esterno di colore arancione (#F57C00) -->

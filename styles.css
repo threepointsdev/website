@@ -1,14 +1,3 @@
-#loading-screen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 1000; /* Assicurati che sia sopra tutto */
-}
-
 .icon-container {
     animation: enhancedZoomRotate 1.5s infinite ease-in-out;
 }
