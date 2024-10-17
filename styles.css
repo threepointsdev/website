@@ -29,9 +29,7 @@
 }
 
 #site-content {
-    display: block; /* Rendi visibile il contenuto del sito una volta caricato */
-    opacity: 0; /* Inizialmente invisibile */
-    transition: opacity 0.2s ease-in; /* Effetto di dissolvenza all'apparizione del contenuto */
+    display: none; 
 }
 
 /* Navbar */
