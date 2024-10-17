@@ -1,3 +1,39 @@
+#loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 1000; /* Assicurati che sia sopra tutto */
+}
+
+.icon-container {
+    animation: enhancedZoomRotate 1.5s infinite ease-in-out;
+}
+
+@keyframes enhancedZoomRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.3) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 0.8;
+    }
+}
+
+#site-content {
+    display: block; /* Rendi visibile il contenuto del sito una volta caricato */
+    opacity: 0; /* Inizialmente invisibile */
+    transition: opacity 0.2s ease-in; /* Effetto di dissolvenza all'apparizione del contenuto */
+}
+
 /* Navbar */
 .navbar {
     position: fixed;

@@ -9,15 +9,16 @@
     <meta name="description"
         content="Servizi di consulenza informatica e sviluppo software specializzati in innovazione applicativa, microservizi, DevOps e automazione.
     Supportiamo le aziende nella crescita digitale, offrendo soluzioni IT su misura e affiancandole per affrontare le sfide tecnologiche con agilità e competenza.">
-   
+
     <meta property="og:title" content="Threepoints - Consulenza Informatica e Sviluppo Software" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Servizi di consulenza informatica e sviluppo software specializzati in innovazione applicativa, microservizi, DevOps e automazione.
+    <meta property="og:description"
+        content="Servizi di consulenza informatica e sviluppo software specializzati in innovazione applicativa, microservizi, DevOps e automazione.
     Supportiamo le aziende nella crescita digitale, offrendo soluzioni IT su misura e affiancandole per affrontare le sfide tecnologiche con agilità e competenza." />
     <meta property="og:image" content="https://threepoints.dev/images/ogimage.png" />
     <meta property="og:url" content="https://threepoints.dev" />
 
-    <link rel="icon" href="images/favicon.png"/>
+    <link rel="icon" href="images/favicon.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,10 +29,11 @@
     <link rel="preload" href="images/logoapuacom.webp" as="image">
     <link rel="preload" href="images/tis.webp" as="image">
 
-     <!-- Google Font -->
--    <link
--        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
--        rel="stylesheet">
+    <!-- Google Font -->
+    -
+    <link -
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        - rel="stylesheet">
 
     <!-- Google Icons -->
     <link rel="stylesheet"
@@ -64,316 +66,356 @@
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-content">
-            <div class="logo">
-                <strong>
-                    <a href="#">THREEPOINTS</a>
-                </strong>
+
+    <!-- Schermata di caricamento -->
+    <div id="loading-screen">
+        <div class="icon-container">
+            <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <!-- Cerchio esterno di colore arancione (#F57C00) -->
+                <circle cx="32" cy="32" r="30" fill="#F57C00" />
+              
+                <!-- Cerchio interno più piccolo con bordo bianco e riempimento arancione -->
+                <circle cx="32" cy="32" r="24" fill="#F57C00" stroke="#FFFFFF" stroke-width="2" />
+              
+                <!-- Testo "TPs" al centro del cerchio, in bianco e font Roboto Bold -->
+                <text x="50%" y="50%" font-family="Roboto, sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central">TPs</text>
+              </svg>
+
+        </div>
+    </div>
+
+    <div id="site-content">
+
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="navbar-content">
+                <div class="logo">
+                    <strong>
+                        <a href="#">THREEPOINTS</a>
+                    </strong>
+                </div>
+                <div class="menu-desktop">
+                    <a href="#siamo">Siamo</a>
+                    <a href="#facciamo">Facciamo</a>
+                    <a href="#clienti">Clienti</a>
+                    <a href="#contattaci">Contattaci</a>
+                </div>
+                <div class="menu-mobile">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <span class="material-symbols-outlined" style="color: white;">menu</span>
+                    </button>
+                </div>
             </div>
-            <div class="menu-desktop">
+            <div class="menu-mobile-items" id="mobile-menu">
+                <button class="close-menu" id="close-menu">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+                <a href="#siamo">Siamo</a>
+                <a href="#facciamo">Facciamo</a>
+                <a href="#clienti">Clienti</a>
+                <a href="#contattaci">Contattaci</a>
+
+                <!-- Aggiungo il contenitore per la scritta "pippo" -->
+                <div class="menu-mobile-footer" id="menu-mobile-footer">
+                    <p>© All Rights Reserved.</p>
+                    <p>THREEPOINTS di Andrea Poggi.</p>
+                    <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
+                </div>
+            </div>
+        </nav>
+        <!-- Sezione Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <strong>Il tuo nuovo Partner IT</strong>
+                <p>Affianchiamo le aziende per vincere le sfide informatiche!</p>
+                <!-- Icona freccia -->
+            </div>
+
+            <div class="scroll-arrow">
+
+                <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px"
+                    fill="#ffffff">
+                    <path d="m480-346.5-237-237 41.5-41L480-429l195.5-195.5 41.5 41-237 237Z" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Contenuto della pagina -->
+        <section id="siamo">
+            <div class="siamo-section-content">
+                <div class="section-title">
+                    <strong>Siamo</strong>
+                </div>
+
+                <p>Una giovane realtà nel mondo della consulenza informatica, nata dalla passione e dall'energia di
+                    professionisti con anni di esperienza in grandi contesti aziendali. Sebbene la nostra azienda sia
+                    appena
+                    nata, il nostro team porta con sé competenze consolidate, maturate in progetti complessi all'interno
+                    di
+                    imprese enterprise.
+                    <br><br>
+                    Siamo motivati dalla voglia di crescere e innovare, affrontando ogni sfida con l’entusiasmo e la
+                    dinamicità che caratterizzano una nuova azienda. Il nostro obiettivo è quello di combinare l’agilità
+                    di
+                    una piccola impresa con l’affidabilità e la professionalità che abbiamo acquisito durante la nostra
+                    esperienza.
+                    <br><br>
+                    Siamo qui per accompagnare i nostri clienti nel raggiungere il loro pieno potenziale digitale.
+                </p>
+            </div>
+        </section>
+
+        <section id="facciamo">
+            <div class="facciamo-section-content">
+                <div class="section-title">
+                    <strong>Facciamo</strong>
+                </div>
+
+                <div class="facciamo-grid">
+                    <!-- Prima colonna della prima riga -->
+                    <div class="facciamo-item">
+                        <span class="material-symbols-outlined" id="innovationicon">bolt</span>
+
+                        <div class="facciamo-text">
+                            <h1>Application Innovation</h1>
+                            <p>Aiutiamo le aziende a migliorare le loro applicazioni esistenti o a svilupparne di nuove.
+                                Non
+                                abbiamo uno standard tecnologico predefinito da offrire ai nostri clienti, ma
+                                analizziamo
+                                attentamente ogni contesto e, sulla base di questo, scegliamo lo stack tecnologico più
+                                adatto.
+                                Non è il business a doversi adattare alle tecnologie, ma sono le tecnologie a doversi
+                                adattare al
+                                business!</p>
+                        </div>
+                    </div>
+
+                    <!-- Seconda colonna della prima riga -->
+                    <div class="facciamo-item">
+                        <span class="material-symbols-outlined" id="microservizi">stack</span>
+
+                        <div class="facciamo-text">
+                            <h1>Microservizi</h1>
+                            <p>Costruire applicazioni moderne richiede architetture flessibili e modulari. Con i
+                                microservizi, suddividiamo le applicazioni in componenti indipendenti, che possono
+                                essere
+                                sviluppati, distribuiti e gestiti separatamente. Questo approccio consente un'elevata
+                                scalabilità, una maggiore resilienza, una manutenibilità migliore e cicli di rilascio
+                                più
+                                rapidi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Prima colonna della seconda riga -->
+                    <div class="facciamo-item">
+                        <span class="material-symbols-outlined" id="devops">rocket</span>
+                        <div class="facciamo-text">
+                            <h1>DevOps e Automazione</h1>
+                            <p>Promuoviamo l'automazione dei processi, dalla scrittura del codice fino alla
+                                distribuzione in
+                                produzione, ottimizzando il ciclo di vita del software. Implementiamo pipeline CI/CD
+                                (Continuous Integration/Continuous Delivery) riducendo i tempi di rilascio e fornendo
+                                maggior governo sui propri applicativi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Seconda colonna della seconda riga -->
+                    <div class="facciamo-item">
+                        <span class="material-symbols-outlined" id="container">dashboard</span>
+
+                        <div class="facciamo-text">
+                            <h1>Container Oriented</h1>
+                            <p>Utilizziamo container Docker per isolare e gestire le applicazioni in ambienti modulari e
+                                portabili, consentendo una maggiore efficienza nello sviluppo e nel deployment. Tramite
+                                orchestratori come kubernates gestiamo e scaliamo automaticamente le applicazioni
+                                garantendo
+                                così una gestione ottimale del carico di lavoro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scegliamo">
+            <div class="scegliamo-section-content">
+                <div class="section-title">
+                    <strong>Scegliamo</strong>
+                </div>
+
+                <div class="scegliamo-grid">
+                    <!-- Posizione (0,0) -->
+                    <div class="scegliamo-item">
+                        <span class="material-symbols-outlined scegl-icon">handshake</span>
+                        <div class="scegliamo-text">
+                            <h1>I rapporti</h1>
+                            <p>Il nostro obiettivo non è solo fornire soluzioni, ma costruire relazioni durature con i
+                                nostri clienti. Crediamo che il vero valore risieda nell’accompagnare le aziende nel
+                                loro
+                                percorso di crescita tecnologica, adattandoci alle loro esigenze in continua evoluzione.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Posizione (1,1) -->
+                    <div class="scegliamo-item">
+                        <span class="material-symbols-outlined scegl-icon">lock_open_right</span>
+                        <div class="scegliamo-text">
+                            <h1>La libertà</h1>
+                            <p>Utilizziamo esclusivamente soluzioni open source, evitando vincoli con specifici brand o
+                                fornitori. Questo approccio ci consente di offrire ai nostri clienti la massima
+                                flessibilità
+                                e di sviluppare soluzioni che possono crescere e adattarsi nel tempo senza restrizioni.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Posizione (2,0) -->
+                    <div class="scegliamo-item">
+                        <span class="material-symbols-outlined scegl-icon">
+                            groups
+                        </span>
+                        <div class="scegliamo-text">
+                            <h1>La condivisione della conoscenza</h1>
+                            <p>Il nostro obiettivo è anche rendere i nostri clienti autonomi. Ci impegniamo a trasferire
+                                le
+                                nostre competenze, formando i team interni affinché possano gestire e sviluppare in modo
+                                indipendente i progetti futuri. Crediamo che una conoscenza condivisa rafforzi la
+                                collaborazione e consenta all'azienda di proseguire il proprio percorso di crescita
+                                tecnologica, senza essere vincolata esclusivamente al nostro supporto.</p>
+                        </div>
+                    </div>
+
+                    <!-- Posizione (3,1) -->
+                    <div class="scegliamo-item">
+                        <span class="material-symbols-outlined scegl-icon">verified</span>
+                        <div class="scegliamo-text">
+                            <h1>La qualità</h1>
+                            <p>È una priorità in tutto ciò che facciamo. Monitoriamo costantemente la qualità del nostro
+                                codice per garantire prestazioni, leggibilità e manutenibilità. Implementiamo test
+                                automatici in ogni nostro applicativo e ci imponiamo code coverage elevate per
+                                assicurare
+                                soluzioni efficienti, che riducano al minimo i costi di manutenzione e facilitino futuri
+                                sviluppi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Clienti -->
+        <section id="clienti">
+            <div class="clienti-section-content">
+                <div class="section-title">
+                    <strong>Clienti</strong>
+                </div>
+
+                <div class="clienti-cards">
+                    <div class="cliente-card" id="imolainformatica">
+                        <div class="cliente-card-logo-container">
+                            <a href="https://imolainformatica.it/" target="_blank">
+                                <img src="images/imola.webp" alt="ImolaInformatica" class="cliente-logo">
+                            </a>
+                        </div>
+                        <strong class="cliente-title">ImolaInformatica</strong>
+                        <p class="cliente-description">Analisi architeturali e tecniche di servizi AS-IS al
+                            fine di individuare i componenti su cui poter effettuare ottimizzazioni e modernizzazioni.
+                            Implementazione delle migliorie.
+                        </p>
+                        <!-- Badges -->
+                        <div class="badges">
+                            <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
+                            <h1 class="badge badge-springboot">Spring Boot</h1>
+                            <span class="badge badge-oracle">Oracle</span>
+                            <span class="badge badge-maven">Maven</span>
+                            <h1 class="badge badge-restapi">REST API</h1>
+                        </div>
+                    </div>
+                    <div class="cliente-card" id="apuacom">
+                        <div class="cliente-card-logo-container">
+                            <a href="https://www.apuacom.it/" target="_blank">
+                                <img src="images/logoapuacom.webp" alt="Apuacom" class="cliente-logo"
+                                    style="margin-top: 15px;">
+                            </a>
+                        </div>
+                        <strong class="cliente-title">Apuacom</strong>
+                        <p class="cliente-description">
+                            Analisi architeturale del sistema informatico aziendale AS-IS con architettura a monolite
+                            per
+                            evolvere in un architettura a microservizi.
+                            Rifattorizzazione monolite e implementazione nuovi microservizi.
+                        </p>
+                        <!-- Badges -->
+                        <div class="badges">
+                            <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
+                            <h1 class="badge badge-django">Django</h1>
+                            <h1 class="badge badge-springboot">Spring Boot</h1>
+                            <span class="badge badge-mysql">MySQL</span>
+                            <h1 class="badge badge-restapi">REST API</h1>
+                        </div>
+                    </div>
+                    <div class="cliente-card" id="tis">
+                        <div class="cliente-card-logo-container" id="tis-logo-container">
+                            <a href="https://www.trusttis.com/" target="_blank">
+                                <img src="images/tis.webp" alt="TIS" class="cliente-logo" style="
+                                background-color: rgb(231, 231, 231);
+                                border-radius: 5px;
+                                padding: 10px">
+                            </a>
+                        </div>
+                        <strong class="cliente-title">TIS</strong>
+                        <p class="cliente-description">Sviluppo di un'app mobile multi-platform progettata per
+                            integrarsi
+                            con strumenti sanitari tramite connessione Bluetooth. L'applicazione
+                            permette agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati
+                            dagli
+                            strumenti
+                            collegati e inviando i risultati degli esami a un server per essere analizzati.</p>
+                        <!-- Badges -->
+                        <div class="badges">
+                            <h1 class="badge badge-django">Flutter</h1>
+                            <h1 class="badge badge-kotlin">Kotlin</h1>
+                            <h1 class="badge badge-swift">Swift</h1>
+                            <h1 class="badge badge-restapi">REST API</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contattaci">
+            <div class="contattaci-section-content">
+                <div class="section-title">
+                    <strong>Contattaci</strong>
+                </div>
+                <p>
+                    Per qualsiasi informazione o richiesta, puoi inviarci un'email a:
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-menu">
                 <a href="#siamo">Siamo</a>
                 <a href="#facciamo">Facciamo</a>
                 <a href="#clienti">Clienti</a>
                 <a href="#contattaci">Contattaci</a>
             </div>
-            <div class="menu-mobile">
-                <button class="menu-toggle" id="menu-toggle">
-                    <span class="material-symbols-outlined" style="color: white;">menu</span>
-                </button>
-            </div>
-        </div>
-        <div class="menu-mobile-items" id="mobile-menu">
-            <button class="close-menu" id="close-menu">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-            <a href="#siamo">Siamo</a>
-            <a href="#facciamo">Facciamo</a>
-            <a href="#clienti">Clienti</a>
-            <a href="#contattaci">Contattaci</a>
-
-            <!-- Aggiungo il contenitore per la scritta "pippo" -->
-            <div class="menu-mobile-footer" id="menu-mobile-footer">
+            <hr><br>
+            <div class="footer-info">
                 <p>© All Rights Reserved.</p>
                 <p>THREEPOINTS di Andrea Poggi.</p>
+                <p>Via Lunense 23B, 54033, Marina di Carrara (MS)</p>
+                <p>P.IVA 01480960457</p>
                 <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
             </div>
-        </div>
-    </nav>
-    <!-- Sezione Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <strong>Il tuo nuovo Partner IT</strong>
-            <p>Affianchiamo le aziende per vincere le sfide informatiche!</p>
-            <!-- Icona freccia -->
-        </div>
-
-        <div class="scroll-arrow">
-
-            <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#ffffff">
-                <path d="m480-346.5-237-237 41.5-41L480-429l195.5-195.5 41.5 41-237 237Z" />
-            </svg>
-        </div>
-    </section>
-
-    <!-- Contenuto della pagina -->
-    <section id="siamo">
-        <div class="siamo-section-content">
-            <div class="section-title">
-                <strong>Siamo</strong>
-            </div>
-
-            <p>Una giovane realtà nel mondo della consulenza informatica, nata dalla passione e dall'energia di
-                professionisti con anni di esperienza in grandi contesti aziendali. Sebbene la nostra azienda sia appena
-                nata, il nostro team porta con sé competenze consolidate, maturate in progetti complessi all'interno di
-                imprese enterprise.
-                <br><br>
-                Siamo motivati dalla voglia di crescere e innovare, affrontando ogni sfida con l’entusiasmo e la
-                dinamicità che caratterizzano una nuova azienda. Il nostro obiettivo è quello di combinare l’agilità di
-                una piccola impresa con l’affidabilità e la professionalità che abbiamo acquisito durante la nostra
-                esperienza.
-                <br><br>
-                Siamo qui per accompagnare i nostri clienti nel raggiungere il loro pieno potenziale digitale.
-            </p>
-        </div>
-    </section>
-
-    <section id="facciamo">
-        <div class="facciamo-section-content">
-            <div class="section-title">
-                <strong>Facciamo</strong>
-            </div>
-
-            <div class="facciamo-grid">
-                <!-- Prima colonna della prima riga -->
-                <div class="facciamo-item">
-                    <span class="material-symbols-outlined" id="innovationicon">bolt</span>
-
-                    <div class="facciamo-text">
-                        <h1>Application Innovation</h1>
-                        <p>Aiutiamo le aziende a migliorare le loro applicazioni esistenti o a svilupparne di nuove. Non
-                            abbiamo uno standard tecnologico predefinito da offrire ai nostri clienti, ma analizziamo
-                            attentamente ogni contesto e, sulla base di questo, scegliamo lo stack tecnologico più
-                            adatto.
-                            Non è il business a doversi adattare alle tecnologie, ma sono le tecnologie a doversi
-                            adattare al
-                            business!</p>
-                    </div>
-                </div>
-
-                <!-- Seconda colonna della prima riga -->
-                <div class="facciamo-item">
-                    <span class="material-symbols-outlined" id="microservizi">stack</span>
-
-                    <div class="facciamo-text">
-                        <h1>Microservizi</h1>
-                        <p>Costruire applicazioni moderne richiede architetture flessibili e modulari. Con i
-                            microservizi, suddividiamo le applicazioni in componenti indipendenti, che possono essere
-                            sviluppati, distribuiti e gestiti separatamente. Questo approccio consente un'elevata
-                            scalabilità, una maggiore resilienza, una manutenibilità migliore e cicli di rilascio più
-                            rapidi.</p>
-                    </div>
-                </div>
-
-                <!-- Prima colonna della seconda riga -->
-                <div class="facciamo-item">
-                    <span class="material-symbols-outlined" id="devops">rocket</span>
-                    <div class="facciamo-text">
-                        <h1>DevOps e Automazione</h1>
-                        <p>Promuoviamo l'automazione dei processi, dalla scrittura del codice fino alla distribuzione in
-                            produzione, ottimizzando il ciclo di vita del software. Implementiamo pipeline CI/CD
-                            (Continuous Integration/Continuous Delivery) riducendo i tempi di rilascio e fornendo
-                            maggior governo sui propri applicativi.</p>
-                    </div>
-                </div>
-
-                <!-- Seconda colonna della seconda riga -->
-                <div class="facciamo-item">
-                    <span class="material-symbols-outlined" id="container">dashboard</span>
-
-                    <div class="facciamo-text">
-                        <h1>Container Oriented</h1>
-                        <p>Utilizziamo container Docker per isolare e gestire le applicazioni in ambienti modulari e
-                            portabili, consentendo una maggiore efficienza nello sviluppo e nel deployment. Tramite
-                            orchestratori come kubernates gestiamo e scaliamo automaticamente le applicazioni garantendo
-                            così una gestione ottimale del carico di lavoro.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="scegliamo">
-        <div class="scegliamo-section-content">
-            <div class="section-title">
-                <strong>Scegliamo</strong>
-            </div>
-
-            <div class="scegliamo-grid">
-                <!-- Posizione (0,0) -->
-                <div class="scegliamo-item">
-                    <span class="material-symbols-outlined scegl-icon">handshake</span>
-                    <div class="scegliamo-text">
-                        <h1>I rapporti</h1>
-                        <p>Il nostro obiettivo non è solo fornire soluzioni, ma costruire relazioni durature con i
-                            nostri clienti. Crediamo che il vero valore risieda nell’accompagnare le aziende nel loro
-                            percorso di crescita tecnologica, adattandoci alle loro esigenze in continua evoluzione.</p>
-                    </div>
-                </div>
-
-                <!-- Posizione (1,1) -->
-                <div class="scegliamo-item">
-                    <span class="material-symbols-outlined scegl-icon">lock_open_right</span>
-                    <div class="scegliamo-text">
-                        <h1>La libertà</h1>
-                        <p>Utilizziamo esclusivamente soluzioni open source, evitando vincoli con specifici brand o
-                            fornitori. Questo approccio ci consente di offrire ai nostri clienti la massima flessibilità
-                            e di sviluppare soluzioni che possono crescere e adattarsi nel tempo senza restrizioni.</p>
-                    </div>
-                </div>
-
-                <!-- Posizione (2,0) -->
-                <div class="scegliamo-item">
-                    <span class="material-symbols-outlined scegl-icon">
-                        groups
-                    </span>
-                    <div class="scegliamo-text">
-                        <h1>La condivisione della conoscenza</h1>
-                        <p>Il nostro obiettivo è anche rendere i nostri clienti autonomi. Ci impegniamo a trasferire le
-                            nostre competenze, formando i team interni affinché possano gestire e sviluppare in modo
-                            indipendente i progetti futuri. Crediamo che una conoscenza condivisa rafforzi la
-                            collaborazione e consenta all'azienda di proseguire il proprio percorso di crescita
-                            tecnologica, senza essere vincolata esclusivamente al nostro supporto.</p>
-                    </div>
-                </div>
-
-                <!-- Posizione (3,1) -->
-                <div class="scegliamo-item">
-                    <span class="material-symbols-outlined scegl-icon">verified</span>
-                    <div class="scegliamo-text">
-                        <h1>La qualità</h1>
-                        <p>È una priorità in tutto ciò che facciamo. Monitoriamo costantemente la qualità del nostro
-                            codice per garantire prestazioni, leggibilità e manutenibilità. Implementiamo test
-                            automatici in ogni nostro applicativo e ci imponiamo code coverage elevate per assicurare
-                            soluzioni efficienti, che riducano al minimo i costi di manutenzione e facilitino futuri
-                            sviluppi.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Clienti -->
-    <section id="clienti">
-        <div class="clienti-section-content">
-            <div class="section-title">
-                <strong>Clienti</strong>
-            </div>
-
-            <div class="clienti-cards">
-                <div class="cliente-card" id="imolainformatica">
-                    <div class="cliente-card-logo-container">
-                        <a href="https://imolainformatica.it/" target="_blank">
-                            <img src="images/imola.webp" alt="ImolaInformatica" class="cliente-logo">
-                        </a>
-                    </div>
-                    <strong class="cliente-title">ImolaInformatica</strong>
-                    <p class="cliente-description">Analisi architeturali e tecniche di servizi AS-IS al
-                        fine di individuare i componenti su cui poter effettuare ottimizzazioni e modernizzazioni.
-                        Implementazione delle migliorie.
-                    </p>
-                    <!-- Badges -->
-                    <div class="badges">
-                        <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
-                        <h1 class="badge badge-springboot">Spring Boot</h1>
-                        <span class="badge badge-oracle">Oracle</span>
-                        <span class="badge badge-maven">Maven</span>
-                        <h1 class="badge badge-restapi">REST API</h1>
-                    </div>
-                </div>
-                <div class="cliente-card" id="apuacom">
-                    <div class="cliente-card-logo-container">
-                        <a href="https://www.apuacom.it/" target="_blank">
-                            <img src="images/logoapuacom.webp" alt="Apuacom" class="cliente-logo"
-                                style="margin-top: 15px;">
-                        </a>
-                    </div>
-                    <strong class="cliente-title">Apuacom</strong>
-                    <p class="cliente-description">
-                        Analisi architeturale del sistema informatico aziendale AS-IS con architettura a monolite per
-                        evolvere in un architettura a microservizi.
-                        Rifattorizzazione monolite e implementazione nuovi microservizi.
-                    </p>
-                    <!-- Badges -->
-                    <div class="badges">
-                        <h1 class="badge badge-architettura">Analisi architetturale - C4 Model</h1>
-                        <h1 class="badge badge-django">Django</h1>
-                        <h1 class="badge badge-springboot">Spring Boot</h1>
-                        <span class="badge badge-mysql">MySQL</span>
-                        <h1 class="badge badge-restapi">REST API</h1>
-                    </div>
-                </div>
-                <div class="cliente-card" id="tis">
-                    <div class="cliente-card-logo-container" id="tis-logo-container">
-                        <a href="https://www.trusttis.com/" target="_blank">
-                            <img src="images/tis.webp" alt="TIS" class="cliente-logo" style="
-                                background-color: rgb(231, 231, 231);
-                                border-radius: 5px;
-                                padding: 10px">
-                        </a>
-                    </div>
-                    <strong class="cliente-title">TIS</strong>
-                    <p class="cliente-description">Sviluppo di un'app mobile multi-platform progettata per integrarsi
-                        con strumenti sanitari tramite connessione Bluetooth. L'applicazione
-                        permette agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati dagli
-                        strumenti
-                        collegati e inviando i risultati degli esami a un server per essere analizzati.</p>
-                    <!-- Badges -->
-                    <div class="badges">
-                        <h1 class="badge badge-django">Flutter</h1>
-                        <h1 class="badge badge-kotlin">Kotlin</h1>
-                        <h1 class="badge badge-swift">Swift</h1>
-                        <h1 class="badge badge-restapi">REST API</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </footer>
 
 
-    <section id="contattaci">
-        <div class="contattaci-section-content">
-            <div class="section-title">
-                <strong>Contattaci</strong>
-            </div>
-            <p>
-                Per qualsiasi informazione o richiesta, puoi inviarci un'email a:
-                <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-menu">
-            <a href="#siamo">Siamo</a>
-            <a href="#facciamo">Facciamo</a>
-            <a href="#clienti">Clienti</a>
-            <a href="#contattaci">Contattaci</a>
-        </div>
-        <hr><br>
-        <div class="footer-info">
-            <p>© All Rights Reserved.</p>
-            <p>THREEPOINTS di Andrea Poggi.</p>
-            <p>Via Lunense 23B, 54033, Marina di Carrara (MS)</p>
-            <p>P.IVA 01480960457</p>
-            <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
-        </div>
-    </footer>
-
-
-    <!-- Aggiungi qui ulteriori sezioni -->
+        <!-- Aggiungi qui ulteriori sezioni -->
+    </div>
 
 </body>
 
