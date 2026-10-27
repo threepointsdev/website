@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
     <title>Consulenza Informatica e Sviluppo Software a Carrara | Threepoints</title>
     <meta name="description"
         content="Threepoints: consulenza informatica e sviluppo software su misura a Carrara, Massa, La Spezia, Lucca, Pisa e in tutta Italia. Microservizi, DevOps, app mobile e modernizzazione di applicazioni.">
@@ -137,19 +141,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- Precaricamento delle immagini principali -->
-    <link rel="preload" href="images/imola.webp" as="image">
-    <link rel="preload" href="images/logoapuacom.webp" as="image">
-    <link rel="preload" href="images/tis.webp" as="image">
 
     <!-- Google Font -->
     
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
 
     <!-- Google Icons -->
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=bolt,close,code,dashboard,groups,handshake,location_on,lock_open_right,menu,public,rocket,stack,support_agent,verified&display=block" />
 
     <!-- CSS Critico inline -->
     <style>
@@ -262,51 +262,52 @@
         </nav>
         <!-- Sezione Hero -->
         <header class="hero-v2">
-            <div class="hero-v2-grid" aria-hidden="true"></div>
-
             <div class="hero-v2-inner">
                 <div class="hero-v2-copy">
-                    <p class="hero-v2-eyebrow reveal" style="--d: .05s">
+                    <p class="hero-v2-eyebrow" data-in="fade">
                         <span class="hero-v2-pulse" aria-hidden="true"></span>
                         Marina di Carrara · Toscana · tutta Italia
                     </p>
 
-                    <h1 class="reveal" style="--d: .15s">
-                        <span class="hero-v2-title">Il tuo nuovo<br>Partner IT<span class="tp-dots"
-                                aria-hidden="true"><i></i><i></i><i></i></span></span>
-                        <span class="hero-v2-kicker">Consulenza informatica e sviluppo software</span>
+                    <h1>
+                        <span class="hero-v2-title">
+                            <span class="line"><span data-in="line">Il tuo nuovo</span></span>
+                            <span class="line"><span data-in="line">Partner IT<span class="tp-dots"
+                                        aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                        </span>
+                        <span class="hero-v2-kicker" data-in="fade">Consulenza informatica e sviluppo software</span>
                     </h1>
 
-                    <p class="hero-v2-lead reveal" style="--d: .3s">Affianchiamo le aziende per vincere le sfide
+                    <p class="hero-v2-lead" data-in="fade">Affianchiamo le aziende per vincere le sfide
                         informatiche: dall'analisi dei sistemi esistenti allo sviluppo di software su misura,
                         fino al rilascio in produzione.</p>
 
-                    <div class="hero-v2-actions reveal" style="--d: .45s">
+                    <div class="hero-v2-actions" data-in="fade">
                         <a class="hero-v2-btn primary" href="#contattaci">Parliamo del tuo progetto</a>
                         <a class="hero-v2-btn ghost" href="#facciamo">Cosa facciamo <span aria-hidden="true">→</span></a>
                     </div>
                 </div>
 
-                <div class="hero-v2-visual reveal" style="--d: .35s" aria-hidden="true">
-                    <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
-                        <path class="tp-edge" d="M200 60 L340 300 L60 300 Z" />
-                        <circle class="tp-ring" cx="200" cy="60" r="26" />
-                        <circle class="tp-ring" cx="340" cy="300" r="26" style="animation-delay: .8s" />
-                        <circle class="tp-ring" cx="60" cy="300" r="26" style="animation-delay: 1.6s" />
-                        <circle class="tp-node" cx="200" cy="60" r="12" />
-                        <circle class="tp-node" cx="340" cy="300" r="12" />
-                        <circle class="tp-node" cx="60" cy="300" r="12" />
-                        <circle class="tp-runner" r="5">
-                            <animateMotion dur="7s" repeatCount="indefinite" path="M200 60 L340 300 L60 300 Z" />
-                        </circle>
-                        <text x="200" y="22" text-anchor="middle">Analisi</text>
-                        <text x="340" y="348" text-anchor="middle">Sviluppo</text>
-                        <text x="60" y="348" text-anchor="middle">Crescita</text>
-                    </svg>
+                <div class="hero-v2-visual" data-in="fade" aria-hidden="true">
+                    <div class="tp-stage">
+                        <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg">
+                            <path class="tp-edge" d="M200 60 L340 300 L60 300 Z" />
+                            <circle class="tp-node" cx="200" cy="60" r="12" />
+                            <circle class="tp-node" cx="340" cy="300" r="12" />
+                            <circle class="tp-node" cx="60" cy="300" r="12" />
+                            <text x="200" y="22" text-anchor="middle">Analisi</text>
+                            <text x="340" y="348" text-anchor="middle">Sviluppo</text>
+                            <text x="60" y="348" text-anchor="middle">Crescita</text>
+                        </svg>
+                        <span class="tp-ring" style="--x: 50%; --y: 15.79%"></span>
+                        <span class="tp-ring" style="--x: 85%; --y: 78.95%; --delay: .8s"></span>
+                        <span class="tp-ring" style="--x: 15%; --y: 78.95%; --delay: 1.6s"></span>
+                        <span class="tp-runner"></span>
+                    </div>
                 </div>
             </div>
 
-            <div class="hero-v2-strip reveal" style="--d: .6s">
+            <div class="hero-v2-strip" data-in="fade">
                 <ul>
                     <li>Consulenza IT</li>
                     <li>Software su misura</li>
@@ -319,369 +320,367 @@
         </header>
 
         <main>
+        <section id="siamo" class="section">
+            <div class="section-inner split">
+                <div class="section-head">
+                    <h2 class="section-title">Siamo<span class="accent">.</span></h2>
+                </div>
 
-        <!-- Contenuto della pagina -->
-        <section id="siamo">
-            <div class="siamo-section-content">
-                <h2 class="section-title">Siamo</h2>
-
-                <p>Una giovane realtà nel mondo della <strong>consulenza informatica</strong> e dello
-                    <strong>sviluppo software</strong>, con sede a Marina di Carrara, nata dalla passione e dall'energia di
-                    professionisti con anni di esperienza in grandi contesti aziendali. Sebbene la nostra azienda sia
-                    giovane, il nostro team porta con sé competenze consolidate, maturate in progetti complessi all'interno
-                    di
-                    imprese enterprise.
-                    <br><br>
-                    Siamo motivati dalla voglia di crescere e innovare, affrontando ogni sfida con l’entusiasmo e la
-                    dinamicità che caratterizzano una nuova azienda. Il nostro obiettivo è quello di combinare l’agilità
-                    di
-                    una piccola impresa con l’affidabilità e la professionalità che abbiamo acquisito durante la nostra
-                    esperienza.
-                    <br><br>
-                    Siamo qui per accompagnare i nostri clienti nel raggiungere il loro pieno potenziale digitale.
-                </p>
-            </div>
-        </section>
-
-        <section id="facciamo">
-            <div class="facciamo-section-content">
-                <h2 class="section-title">Facciamo</h2>
-
-                <div class="facciamo-grid">
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="consulenza">support_agent</span>
-
-                        <div class="facciamo-text">
-                            <h3>Consulenza Informatica</h3>
-                            <p>Analizziamo i sistemi informativi esistenti, individuiamo colli di bottiglia, rischi e
-                                opportunità di miglioramento e definiamo insieme a te una roadmap tecnologica concreta.
-                                Ti affianchiamo nelle scelte architetturali e nella gestione dei progetti IT, dalla fase
-                                di analisi fino al rilascio.</p>
-                        </div>
-                    </div>
-
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="sviluppo">code</span>
-
-                        <div class="facciamo-text">
-                            <h3>Sviluppo Software su Misura</h3>
-                            <p>Progettiamo e realizziamo applicazioni web, gestionali, API e app mobile costruite sulle
-                                reali esigenze della tua azienda. Codice di qualità, testato e documentato, pensato per
-                                crescere insieme al tuo business e semplice da manutenere nel tempo.</p>
-                        </div>
-                    </div>
-
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="innovationicon">bolt</span>
-
-                        <div class="facciamo-text">
-                            <h3>Application Innovation</h3>
-                            <p>Aiutiamo le aziende a migliorare le loro applicazioni esistenti o a svilupparne di nuove.
-                                Non
-                                abbiamo uno standard tecnologico predefinito da offrire ai nostri clienti, ma
-                                analizziamo
-                                attentamente ogni contesto e, sulla base di questo, scegliamo lo stack tecnologico più
-                                adatto.
-                                Non è il business a doversi adattare alle tecnologie, ma sono le tecnologie a doversi
-                                adattare al
-                                business!</p>
-                        </div>
-                    </div>
-
-                    <!-- Seconda colonna della prima riga -->
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="microservizi">stack</span>
-
-                        <div class="facciamo-text">
-                            <h3>Microservizi</h3>
-                            <p>Costruire applicazioni moderne richiede architetture flessibili e modulari. Con i
-                                microservizi, suddividiamo le applicazioni in componenti indipendenti, che possono
-                                essere
-                                sviluppati, distribuiti e gestiti separatamente. Questo approccio consente un'elevata
-                                scalabilità, una maggiore resilienza, una manutenibilità migliore e cicli di rilascio
-                                più
-                                rapidi.</p>
-                        </div>
-                    </div>
-
-                    <!-- Prima colonna della seconda riga -->
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="devops">rocket</span>
-                        <div class="facciamo-text">
-                            <h3>DevOps e Automazione</h3>
-                            <p>Promuoviamo l'automazione dei processi, dalla scrittura del codice fino alla
-                                distribuzione in
-                                produzione, ottimizzando il ciclo di vita del software. Implementiamo pipeline CI/CD
-                                (Continuous Integration/Continuous Delivery) riducendo i tempi di rilascio e fornendo
-                                maggior governo sui propri applicativi.</p>
-                        </div>
-                    </div>
-
-                    <!-- Seconda colonna della seconda riga -->
-                    <div class="facciamo-item">
-                        <span class="material-symbols-outlined" aria-hidden="true" id="container">dashboard</span>
-
-                        <div class="facciamo-text">
-                            <h3>Container Oriented</h3>
-                            <p>Utilizziamo container Docker per isolare e gestire le applicazioni in ambienti modulari e
-                                portabili, consentendo una maggiore efficienza nello sviluppo e nel deployment. Tramite
-                                orchestratori come Kubernetes gestiamo e scaliamo automaticamente le applicazioni
-                                garantendo
-                                così una gestione ottimale del carico di lavoro.</p>
-                        </div>
-                    </div>
+                <div class="prose">
+                    <p class="big">Una giovane realtà nel mondo della <strong>consulenza informatica</strong> e dello
+                        <strong>sviluppo software</strong>, con sede a Marina di Carrara, nata dalla passione e
+                        dall'energia di professionisti con anni di esperienza in grandi contesti aziendali.</p>
+                    <p>Sebbene la nostra azienda sia giovane, il nostro team porta con sé competenze consolidate,
+                        maturate in progetti complessi all'interno di imprese enterprise.</p>
+                    <p>Siamo motivati dalla voglia di crescere e innovare, affrontando ogni sfida con l’entusiasmo e
+                        la dinamicità che caratterizzano una nuova azienda. Il nostro obiettivo è quello di combinare
+                        l’agilità di una piccola impresa con l’affidabilità e la professionalità che abbiamo
+                        acquisito durante la nostra esperienza.</p>
+                    <p>Siamo qui per accompagnare i nostri clienti nel raggiungere il loro pieno potenziale
+                        digitale.</p>
                 </div>
             </div>
         </section>
 
-        <section id="scegliamo">
-            <div class="scegliamo-section-content">
-                <h2 class="section-title">Scegliamo</h2>
+        <section id="facciamo" class="section tone-2">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2 class="section-title">Facciamo<span class="accent">.</span></h2>
+                    <p class="section-lead">Dalla consulenza allo sviluppo, fino al rilascio in produzione: un unico
+                        partner per tutto il ciclo di vita del software.</p>
+                </div>
 
-                <div class="scegliamo-grid">
-                    <!-- Posizione (0,0) -->
-                    <div class="scegliamo-item">
-                        <span class="material-symbols-outlined scegl-icon" aria-hidden="true">handshake</span>
-                        <div class="scegliamo-text">
+                <div class="svc-grid">
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">support_agent</span>
+                            <span class="svc-num">01</span>
+                        </div>
+                        <h3>Consulenza Informatica</h3>
+                        <p>Analizziamo i sistemi informativi esistenti, individuiamo colli di bottiglia, rischi e
+                            opportunità di miglioramento e definiamo insieme a te una roadmap tecnologica concreta.
+                            Ti affianchiamo nelle scelte architetturali e nella gestione dei progetti IT, dalla fase
+                            di analisi fino al rilascio.</p>
+                    </article>
+
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">code</span>
+                            <span class="svc-num">02</span>
+                        </div>
+                        <h3>Sviluppo Software su Misura</h3>
+                        <p>Progettiamo e realizziamo applicazioni web, gestionali, API e app mobile costruite sulle
+                            reali esigenze della tua azienda. Codice di qualità, testato e documentato, pensato per
+                            crescere insieme al tuo business e semplice da manutenere nel tempo.</p>
+                    </article>
+
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">bolt</span>
+                            <span class="svc-num">03</span>
+                        </div>
+                        <h3>Application Innovation</h3>
+                        <p>Aiutiamo le aziende a migliorare le loro applicazioni esistenti o a svilupparne di nuove.
+                            Non abbiamo uno standard tecnologico predefinito: analizziamo attentamente ogni contesto
+                            e scegliamo lo stack più adatto. Non è il business a doversi adattare alle tecnologie, ma
+                            sono le tecnologie a doversi adattare al business!</p>
+                    </article>
+
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">stack</span>
+                            <span class="svc-num">04</span>
+                        </div>
+                        <h3>Microservizi</h3>
+                        <p>Costruire applicazioni moderne richiede architetture flessibili e modulari. Con i
+                            microservizi suddividiamo le applicazioni in componenti indipendenti, sviluppati,
+                            distribuiti e gestiti separatamente: più scalabilità, più resilienza, manutenibilità
+                            migliore e cicli di rilascio più rapidi.</p>
+                    </article>
+
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">rocket</span>
+                            <span class="svc-num">05</span>
+                        </div>
+                        <h3>DevOps e Automazione</h3>
+                        <p>Promuoviamo l'automazione dei processi, dalla scrittura del codice fino alla
+                            distribuzione in produzione, ottimizzando il ciclo di vita del software. Implementiamo
+                            pipeline CI/CD (Continuous Integration/Continuous Delivery) riducendo i tempi di
+                            rilascio e fornendo maggior governo sui propri applicativi.</p>
+                    </article>
+
+                    <article class="svc">
+                        <div class="svc-top">
+                            <span class="material-symbols-outlined" aria-hidden="true">dashboard</span>
+                            <span class="svc-num">06</span>
+                        </div>
+                        <h3>Container Oriented</h3>
+                        <p>Utilizziamo container Docker per isolare e gestire le applicazioni in ambienti modulari e
+                            portabili, con maggiore efficienza nello sviluppo e nel deployment. Tramite orchestratori
+                            come Kubernetes gestiamo e scaliamo automaticamente le applicazioni, garantendo una
+                            gestione ottimale del carico di lavoro.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="scegliamo" class="section dark has-grid">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2 class="section-title">Scegliamo<span class="accent">.</span></h2>
+                </div>
+
+                <div class="values">
+                    <div class="value">
+                        <span class="value-icon"><span class="material-symbols-outlined"
+                                aria-hidden="true">handshake</span></span>
+                        <div>
                             <h3>I rapporti</h3>
                             <p>Il nostro obiettivo non è solo fornire soluzioni, ma costruire relazioni durature con i
                                 nostri clienti. Crediamo che il vero valore risieda nell’accompagnare le aziende nel
-                                loro
-                                percorso di crescita tecnologica, adattandoci alle loro esigenze in continua evoluzione.
-                            </p>
+                                loro percorso di crescita tecnologica, adattandoci alle loro esigenze in continua
+                                evoluzione.</p>
                         </div>
                     </div>
 
-                    <!-- Posizione (1,1) -->
-                    <div class="scegliamo-item">
-                        <span class="material-symbols-outlined scegl-icon" aria-hidden="true">lock_open_right</span>
-                        <div class="scegliamo-text">
+                    <div class="value">
+                        <span class="value-icon"><span class="material-symbols-outlined"
+                                aria-hidden="true">lock_open_right</span></span>
+                        <div>
                             <h3>La libertà</h3>
                             <p>Utilizziamo esclusivamente soluzioni open source, evitando vincoli con specifici brand o
                                 fornitori. Questo approccio ci consente di offrire ai nostri clienti la massima
-                                flessibilità
-                                e di sviluppare soluzioni che possono crescere e adattarsi nel tempo senza restrizioni.
-                            </p>
+                                flessibilità e di sviluppare soluzioni che possono crescere e adattarsi nel tempo
+                                senza restrizioni.</p>
                         </div>
                     </div>
 
-                    <!-- Posizione (2,0) -->
-                    <div class="scegliamo-item">
-                        <span class="material-symbols-outlined scegl-icon" aria-hidden="true">
-                            groups
-                        </span>
-                        <div class="scegliamo-text">
+                    <div class="value">
+                        <span class="value-icon"><span class="material-symbols-outlined"
+                                aria-hidden="true">groups</span></span>
+                        <div>
                             <h3>La condivisione della conoscenza</h3>
-                            <p>Il nostro obiettivo è anche rendere i nostri clienti autonomi. Ci impegniamo a trasferire
-                                le
-                                nostre competenze, formando i team interni affinché possano gestire e sviluppare in modo
-                                indipendente i progetti futuri. Crediamo che una conoscenza condivisa rafforzi la
-                                collaborazione e consenta all'azienda di proseguire il proprio percorso di crescita
-                                tecnologica, senza essere vincolata esclusivamente al nostro supporto.</p>
+                            <p>Il nostro obiettivo è anche rendere i nostri clienti autonomi. Trasferiamo le nostre
+                                competenze, formando i team interni affinché possano gestire e sviluppare in modo
+                                indipendente i progetti futuri, senza essere vincolati esclusivamente al nostro
+                                supporto.</p>
                         </div>
                     </div>
 
-                    <!-- Posizione (3,1) -->
-                    <div class="scegliamo-item">
-                        <span class="material-symbols-outlined scegl-icon" aria-hidden="true">verified</span>
-                        <div class="scegliamo-text">
+                    <div class="value">
+                        <span class="value-icon"><span class="material-symbols-outlined"
+                                aria-hidden="true">verified</span></span>
+                        <div>
                             <h3>La qualità</h3>
-                            <p>È una priorità in tutto ciò che facciamo. Monitoriamo costantemente la qualità del nostro
+                            <p>È una priorità in tutto ciò che facciamo. Monitoriamo costantemente la qualità del
                                 codice per garantire prestazioni, leggibilità e manutenibilità. Implementiamo test
-                                automatici in ogni nostro applicativo e ci imponiamo code coverage elevate per
-                                assicurare
-                                soluzioni efficienti, che riducano al minimo i costi di manutenzione e facilitino futuri
-                                sviluppi.</p>
+                                automatici in ogni applicativo e ci imponiamo code coverage elevate, per ridurre al
+                                minimo i costi di manutenzione e facilitare gli sviluppi futuri.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sezione Clienti -->
-        <section id="clienti">
-            <div class="clienti-section-content">
-                <h2 class="section-title">Clienti</h2>
+        <section id="clienti" class="section">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2 class="section-title">Clienti<span class="accent">.</span></h2>
+                </div>
 
-                <div class="clienti-cards">
+                <div class="clients">
                     <article class="cliente-card" id="imolainformatica">
                         <div class="cliente-card-logo-container">
                             <a href="https://imolainformatica.it/" target="_blank" rel="noopener">
-                                <img src="images/imola.webp" alt="Logo ImolaInformatica" class="cliente-logo" width="244" height="90">
+                                <img src="images/imola.webp" alt="Logo ImolaInformatica" class="cliente-logo"
+                                    width="244" height="90">
                             </a>
                         </div>
                         <h3 class="cliente-title">ImolaInformatica</h3>
-                        <p class="cliente-description">Analisi architetturali e tecniche di servizi AS-IS al
-                            fine di individuare i componenti su cui poter effettuare ottimizzazioni e modernizzazioni.
-                            Implementazione delle migliorie.
-                        </p>
-                        <!-- Badges -->
+                        <p class="cliente-description">Analisi architetturali e tecniche di servizi AS-IS al fine di
+                            individuare i componenti su cui poter effettuare ottimizzazioni e modernizzazioni.
+                            Implementazione delle migliorie.</p>
                         <div class="badges">
-                            <span class="badge badge-architettura">Analisi architetturale - C4 Model</span>
-                            <span class="badge badge-springboot">Spring Boot</span>
-                            <span class="badge badge-oracle">Oracle</span>
-                            <span class="badge badge-maven">Maven</span>
-                            <span class="badge badge-restapi">REST API</span>
+                            <span class="badge">Analisi architetturale - C4 Model</span>
+                            <span class="badge">Spring Boot</span>
+                            <span class="badge">Oracle</span>
+                            <span class="badge">Maven</span>
+                            <span class="badge">REST API</span>
                         </div>
                     </article>
+
                     <article class="cliente-card" id="apuacom">
                         <div class="cliente-card-logo-container">
                             <a href="https://www.apuacom.it/" target="_blank" rel="noopener">
-                                <img src="images/logoapuacom.webp" alt="Logo Apuacom" class="cliente-logo" width="230" height="48"
-                                    style="margin-top: 15px;">
+                                <img src="images/logoapuacom.webp" alt="Logo Apuacom" class="cliente-logo"
+                                    width="230" height="48">
                             </a>
                         </div>
                         <h3 class="cliente-title">Apuacom</h3>
-                        <p class="cliente-description">
-                            Analisi architetturale del sistema informatico aziendale AS-IS con architettura a monolite
-                            per
-                            evolvere in un'architettura a microservizi.
-                            Rifattorizzazione monolite e implementazione nuovi microservizi.
-                        </p>
-                        <!-- Badges -->
+                        <p class="cliente-description">Analisi architetturale del sistema informatico aziendale AS-IS
+                            con architettura a monolite per evolvere in un'architettura a microservizi.
+                            Rifattorizzazione del monolite e implementazione di nuovi microservizi.</p>
                         <div class="badges">
-                            <span class="badge badge-architettura">Analisi architetturale - C4 Model</span>
-                            <span class="badge badge-django">Django</span>
-                            <span class="badge badge-springboot">Spring Boot</span>
-                            <span class="badge badge-mysql">MySQL</span>
-                            <span class="badge badge-restapi">REST API</span>
+                            <span class="badge">Analisi architetturale - C4 Model</span>
+                            <span class="badge">Django</span>
+                            <span class="badge">Spring Boot</span>
+                            <span class="badge">MySQL</span>
+                            <span class="badge">REST API</span>
                         </div>
                     </article>
+
                     <article class="cliente-card" id="tis">
-                        <div class="cliente-card-logo-container" id="tis-logo-container">
+                        <div class="cliente-card-logo-container">
                             <a href="https://www.trusttis.com/" target="_blank" rel="noopener">
-                                <img src="images/tis.webp" alt="Logo TIS" class="cliente-logo" width="392" height="150" style="
-                                background-color: rgb(231, 231, 231);
-                                border-radius: 5px;
-                                padding: 10px">
+                                <img src="images/tis.webp" alt="Logo TIS" class="cliente-logo cliente-logo-boxed"
+                                    width="392" height="150">
                             </a>
                         </div>
                         <h3 class="cliente-title">TIS</h3>
                         <p class="cliente-description">Sviluppo di un'app mobile multi-platform progettata per
-                            integrarsi
-                            con strumenti sanitari tramite connessione Bluetooth. L'applicazione
-                            permette agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati
-                            dagli
-                            strumenti
-                            collegati e inviando i risultati degli esami a un server per essere analizzati.</p>
-                        <!-- Badges -->
+                            integrarsi con strumenti sanitari tramite connessione Bluetooth. L'applicazione permette
+                            agli infermieri di eseguire esami diagnostici sui pazienti, raccogliendo i dati dagli
+                            strumenti collegati e inviando i risultati a un server per essere analizzati.</p>
                         <div class="badges">
-                            <span class="badge badge-flutter">Flutter</span>
-                            <span class="badge badge-kotlin">Kotlin</span>
-                            <span class="badge badge-swift">Swift</span>
-                            <span class="badge badge-restapi">REST API</span>
+                            <span class="badge">Flutter</span>
+                            <span class="badge">Kotlin</span>
+                            <span class="badge">Swift</span>
+                            <span class="badge">REST API</span>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
+        <section id="dove" class="section tone-2">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2 class="section-title">Dove operiamo<span class="accent">.</span></h2>
+                    <p class="section-lead">La nostra sede è a <strong>Marina di Carrara</strong>, nel cuore della
+                        costa apuana. Da qui offriamo consulenza informatica e sviluppo software alle aziende del
+                        territorio, con incontri in presenza nelle province vicine, e collaboriamo da remoto con
+                        clienti in <strong>tutte le province italiane</strong>.</p>
+                </div>
 
-        <!-- Sezione Dove operiamo -->
-        <section id="dove">
-            <div class="dove-section-content">
-                <h2 class="section-title">Dove operiamo</h2>
-
-                <p>La nostra sede è a <strong>Marina di Carrara</strong>, nel cuore della costa apuana. Da qui offriamo
-                    consulenza informatica e sviluppo software alle aziende del territorio, con incontri in presenza
-                    nelle province vicine, e collaboriamo da remoto con clienti in <strong>tutte le province
-                        italiane</strong>, dal Nord al Sud.</p>
-
-                <div class="dove-grid">
-                    <div class="dove-card">
+                <div class="places">
+                    <div class="place">
                         <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <h3>Massa-Carrara</h3>
                         <p>Carrara, Massa, Montignoso, Aulla e la Lunigiana.</p>
                     </div>
-                    <div class="dove-card">
+                    <div class="place">
                         <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <h3>La Spezia</h3>
                         <p>La Spezia, Sarzana, Lerici, Luni e la Val di Magra.</p>
                     </div>
-                    <div class="dove-card">
+                    <div class="place">
                         <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <h3>Lucca</h3>
                         <p>Lucca, Viareggio, Pietrasanta, Capannori e la Versilia.</p>
                     </div>
-                    <div class="dove-card">
+                    <div class="place">
                         <span class="material-symbols-outlined" aria-hidden="true">location_on</span>
                         <h3>Pisa</h3>
                         <p>Pisa, Cascina, Pontedera, San Giuliano Terme e il Valdarno.</p>
                     </div>
                 </div>
 
-                <p>Lavori in un'altra provincia? Milano, Roma, Firenze, Genova, Bologna, Torino, Napoli o qualsiasi
-                    altra città italiana: grazie a strumenti di collaborazione remota e metodologie agili seguiamo
-                    progetti di sviluppo software in tutta Italia con la stessa cura che dedichiamo ai clienti del
-                    nostro territorio.</p>
+                <div class="remote">
+                    <span class="material-symbols-outlined" aria-hidden="true">public</span>
+                    <p>Lavori in un'altra provincia? Milano, Roma, Firenze, Genova, Bologna, Torino, Napoli o
+                        qualsiasi altra città italiana: grazie a strumenti di collaborazione remota e metodologie
+                        agili seguiamo progetti di sviluppo software in tutta Italia con la stessa cura che
+                        dedichiamo ai clienti del nostro territorio.</p>
+                </div>
             </div>
         </section>
 
-        <!-- Sezione FAQ -->
-        <section id="faq">
-            <div class="faq-section-content">
-                <h2 class="section-title">Domande frequenti</h2>
+        <section id="faq" class="section">
+            <div class="section-inner split">
+                <div class="section-head">
+                    <h2 class="section-title">Domande frequenti<span class="accent">.</span></h2>
+                </div>
 
-                <details>
-                    <summary>Di cosa si occupa Threepoints?</summary>
-                    <p>Threepoints offre consulenza informatica e sviluppo software su misura: modernizzazione di
-                        applicazioni esistenti, architetture a microservizi, DevOps e pipeline CI/CD,
-                        containerizzazione con Docker e Kubernetes e sviluppo di app mobile.</p>
-                </details>
-                <details>
-                    <summary>In quali zone opera Threepoints?</summary>
-                    <p>La sede è a Marina di Carrara (MS). Seguiamo in presenza aziende delle province di
-                        Massa-Carrara, La Spezia, Lucca e Pisa e lavoriamo da remoto con clienti in tutte le province
-                        italiane.</p>
-                </details>
-                <details>
-                    <summary>Quali tecnologie utilizzate?</summary>
-                    <p>Non abbiamo uno stack predefinito: scegliamo la tecnologia in base al contesto. Lavoriamo spesso
-                        con Java e Spring Boot, Python e Django, Flutter, Kotlin e Swift, Docker e Kubernetes,
-                        privilegiando soluzioni open source.</p>
-                </details>
-                <details>
-                    <summary>Come posso richiedere una consulenza?</summary>
-                    <p>Scrivi a <a href="mailto:info@threepoints.dev">info@threepoints.dev</a> descrivendo il tuo
-                        progetto o la tua esigenza: ti ricontatteremo per un primo confronto senza impegno.</p>
-                </details>
+                <div class="faq-list">
+                    <details>
+                        <summary>Di cosa si occupa Threepoints?</summary>
+                        <p>Threepoints offre consulenza informatica e sviluppo software su misura: modernizzazione di
+                            applicazioni esistenti, architetture a microservizi, DevOps e pipeline CI/CD,
+                            containerizzazione con Docker e Kubernetes e sviluppo di app mobile.</p>
+                    </details>
+                    <details>
+                        <summary>In quali zone opera Threepoints?</summary>
+                        <p>La sede è a Marina di Carrara (MS). Seguiamo in presenza aziende delle province di
+                            Massa-Carrara, La Spezia, Lucca e Pisa e lavoriamo da remoto con clienti in tutte le
+                            province italiane.</p>
+                    </details>
+                    <details>
+                        <summary>Quali tecnologie utilizzate?</summary>
+                        <p>Non abbiamo uno stack predefinito: scegliamo la tecnologia in base al contesto. Lavoriamo
+                            spesso con Java e Spring Boot, Python e Django, Flutter, Kotlin e Swift, Docker e
+                            Kubernetes, privilegiando soluzioni open source.</p>
+                    </details>
+                    <details>
+                        <summary>Come posso richiedere una consulenza?</summary>
+                        <p>Scrivi a <a href="mailto:info@threepoints.dev">info@threepoints.dev</a> descrivendo il tuo
+                            progetto o la tua esigenza: ti ricontatteremo per un primo confronto senza impegno.</p>
+                    </details>
+                </div>
             </div>
         </section>
 
-        <section id="contattaci">
-            <div class="contattaci-section-content">
-                <h2 class="section-title">Contattaci</h2>
-                <p>
-                    Per qualsiasi informazione o richiesta, puoi inviarci un'email a:
-                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
-                </p>
+        <section id="contattaci" class="section contact">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2 class="section-title">Parliamo del tuo progetto<span class="accent">.</span></h2>
+                    <p class="section-lead">Per qualsiasi informazione o richiesta scrivici: ti ricontattiamo per un
+                        primo confronto, senza impegno.</p>
+                </div>
+
+                <div class="contact-actions">
+                    <a class="btn primary" href="mailto:info@threepoints.dev">Scrivici una email</a>
+                    <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </div>
             </div>
         </section>
         </main>
 
-        <!-- Footer -->
         <footer class="footer">
-            <div class="footer-menu">
-                <a href="#siamo">Siamo</a>
-                <a href="#facciamo">Facciamo</a>
-                <a href="#clienti">Clienti</a>
-                <a href="#dove">Dove</a>
-                <a href="#contattaci">Contattaci</a>
+            <div class="footer-inner">
+                <div>
+                    <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                    <address>
+                        THREEPOINTS di Andrea Poggi<br>
+                        Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                        P.IVA 01480960457<br>
+                        <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                    </address>
+                </div>
+                <nav aria-label="Sezioni">
+                    <p class="footer-heading">Sito</p>
+                    <ul>
+                        <li><a href="#siamo">Siamo</a></li>
+                        <li><a href="#facciamo">Facciamo</a></li>
+                        <li><a href="#clienti">Clienti</a></li>
+                        <li><a href="#dove">Dove operiamo</a></li>
+                        <li><a href="#contattaci">Contattaci</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Zone servite">
+                    <p class="footer-heading">Zone servite</p>
+                    <ul>
+                        <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                        <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                        <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                        <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="footer-zone">
-                <a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a>
-                <a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a>
-                <a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a>
-                <a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a>
-            </div>
-            <hr><br>
-            <address class="footer-info">
+            <div class="footer-bottom">
                 <p>© All Rights Reserved.</p>
-                <p>THREEPOINTS di Andrea Poggi.</p>
-                <p>Via Lunense 23B, 54033, Marina di Carrara (MS)</p>
-                <p>P.IVA 01480960457</p>
-                <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
-            </address>
+                <p>Consulenza informatica e sviluppo software</p>
+            </div>
         </footer>
 
     </div>

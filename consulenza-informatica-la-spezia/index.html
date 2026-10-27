@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
     <title>Consulenza Informatica e Sviluppo Software a La Spezia | Threepoints</title>
     <meta name="description" content="Consulenza informatica e sviluppo software su misura a La Spezia, Sarzana, Lerici e Val di Magra. A pochi minuti da Marina di Carrara: app, microservizi e DevOps.">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -87,9 +91,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu&display=block" />
 
     <!-- CSS di base (in index.html è inline insieme alla schermata di caricamento) -->
     <style>
@@ -148,83 +152,148 @@
         </div>
     </nav>
 
-    <header class="hero hero-local">
-        <div class="hero-content">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Home</a> › Consulenza informatica La Spezia
-            </nav>
-            <h1>
-                <span class="hero-title">Consulenza informatica e sviluppo software a La Spezia</span>
-            </h1>
-            <p>A pochi minuti da Sarzana e dalla Val di Magra.</p>
+    <header class="hero-v2 hero-v2-local">
+        <div class="hero-v2-inner">
+            <div class="hero-v2-copy">
+                <nav class="hero-v2-eyebrow" data-in="fade" aria-label="Breadcrumb">
+                    <span class="hero-v2-pulse" aria-hidden="true"></span>
+                    <a href="/">Home</a> › Consulenza informatica La Spezia
+                </nav>
+
+                <h1>
+                    <span class="hero-v2-title">
+                        <span class="line"><span data-in="line">Consulenza informatica e sviluppo software a La Spezia<span class="tp-dots"
+                                    aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-v2-lead" data-in="fade">A pochi minuti da Sarzana e dalla Val di Magra.</p>
+
+                <div class="hero-v2-actions" data-in="fade">
+                    <a class="hero-v2-btn primary"
+                        href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20La%20Spezia">Richiedi una consulenza</a>
+                    <a class="hero-v2-btn ghost" href="/#facciamo">Tutti i servizi <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-    <section class="local-section">
-        <div class="local-section-content">
-            <h2 class="section-title">Il tuo partner IT in provincia di La Spezia</h2>
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il tuo partner IT in provincia di La Spezia<span class="accent">.</span></h2>
+            </div>
 
-            <p>Dalla nostra sede di Marina di Carrara raggiungiamo in pochi minuti <strong>Sarzana</strong>, <strong>Luni</strong> e <strong>La Spezia</strong>. Per questo seguiamo molte aziende spezzine con incontri in presenza, affiancando il lavoro da remoto quando serve.</p>
-
-            <p>Il golfo è un'area con un'economia molto specifica: <strong>cantieristica navale</strong> e nautica da diporto, <strong>porto commerciale e logistica</strong>, difesa, turismo delle Cinque Terre e del golfo dei Poeti. Settori in cui processi, dati e integrazioni con fornitori e partner fanno la differenza.</p>
+            <div class="prose">
+                <p>Dalla nostra sede di Marina di Carrara raggiungiamo in pochi minuti <strong>Sarzana</strong>, <strong>Luni</strong> e <strong>La Spezia</strong>. Per questo seguiamo molte aziende spezzine con incontri in presenza, affiancando il lavoro da remoto quando serve.</p>
+                <p>Il golfo è un'area con un'economia molto specifica: <strong>cantieristica navale</strong> e nautica da diporto, <strong>porto commerciale e logistica</strong>, difesa, turismo delle Cinque Terre e del golfo dei Poeti. Settori in cui processi, dati e integrazioni con fornitori e partner fanno la differenza.</p>
+            </div>
         </div>
     </section>
 
-    <section class="local-section alt">
-        <div class="local-section-content">
-            <h2 class="section-title">Come aiutiamo le aziende spezzine</h2>
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Come aiutiamo le aziende spezzine<span class="accent">.</span></h2>
+            </div>
 
-            <ul>
-                <li>Software su misura per la gestione di commesse, cantieri e manutenzioni.</li>
-                <li>Integrazione con sistemi portuali, logistici e di tracciamento delle spedizioni.</li>
-                <li>Piattaforme web e app per strutture turistiche, prenotazioni e servizi.</li>
-                <li>Analisi architetturale e modernizzazione di applicazioni legacy.</li>
-                <li>Automazione DevOps e migrazione su container Docker e Kubernetes.</li>
-            </ul>
+            <div class="prose">
+                <ul class="checklist">
+                    <li>Software su misura per la gestione di commesse, cantieri e manutenzioni.</li>
+                    <li>Integrazione con sistemi portuali, logistici e di tracciamento delle spedizioni.</li>
+                    <li>Piattaforme web e app per strutture turistiche, prenotazioni e servizi.</li>
+                    <li>Analisi architetturale e modernizzazione di applicazioni legacy.</li>
+                    <li>Automazione DevOps e migrazione su container Docker e Kubernetes.</li>
+                </ul>
 
-            <p>Non abbiamo uno stack tecnologico imposto: analizziamo il contesto e scegliamo gli strumenti più
-                adatti, privilegiando soluzioni open source per non legarti a nessun fornitore. Scopri tutti i
-                <a href="/#facciamo">servizi di consulenza e sviluppo software</a> e i
-                <a href="/#clienti">progetti realizzati per i nostri clienti</a>.</p>
+                <p>Non abbiamo uno stack tecnologico imposto: analizziamo il contesto e scegliamo gli strumenti più
+                    adatti, privilegiando soluzioni open source per non legarti a nessun fornitore. Scopri tutti i
+                    <a href="/#facciamo">servizi di consulenza e sviluppo software</a> e i
+                    <a href="/#clienti">progetti realizzati per i nostri clienti</a>.</p>
+            </div>
         </div>
     </section>
 
-    <section class="local-section">
-        <div class="local-section-content">
-            <h2 class="section-title">Zone servite</h2>
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Zone servite<span class="accent">.</span></h2>
+            </div>
 
-            <p>Seguiamo aziende in tutta la provincia della Spezia: La Spezia, Sarzana, Luni, Castelnuovo Magra, Santo Stefano di Magra, Arcola, Lerici, Ameglia, Vezzano Ligure, Follo, Portovenere, Levanto.</p>
+            <div class="prose">
+                <p>Seguiamo aziende in tutta la provincia della Spezia:</p>
+                <div class="towns">
+                    <span class="badge">La Spezia</span>
+                    <span class="badge">Sarzana</span>
+                    <span class="badge">Luni</span>
+                    <span class="badge">Castelnuovo Magra</span>
+                    <span class="badge">Santo Stefano di Magra</span>
+                    <span class="badge">Arcola</span>
+                    <span class="badge">Lerici</span>
+                    <span class="badge">Ameglia</span>
+                    <span class="badge">Vezzano Ligure</span>
+                    <span class="badge">Follo</span>
+                    <span class="badge">Portovenere</span>
+                    <span class="badge">Levanto</span>
+                </div>
+                <p>Operiamo anche nelle province di <a href="/consulenza-informatica-massa-carrara/">Massa-Carrara</a>, <a href="/consulenza-informatica-lucca/">Lucca</a>, <a href="/consulenza-informatica-pisa/">Pisa</a> e, da remoto, in tutta Italia.</p>
+            </div>
+        </div>
+    </section>
 
-            <p>Operiamo anche nelle province di <a href="/consulenza-informatica-massa-carrara/">Massa-Carrara</a>, <a href="/consulenza-informatica-lucca/">Lucca</a>, <a href="/consulenza-informatica-pisa/">Pisa</a> e, da remoto, in tutta Italia.</p>
+    <section class="section contact">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Parliamo del tuo progetto<span class="accent">.</span></h2>
+                <p class="section-lead">Raccontaci la tua esigenza: ti ricontattiamo per un primo confronto,
+                    senza impegno.</p>
+            </div>
 
-            <a class="local-cta" href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20La%20Spezia">Richiedi una consulenza</a>
+            <div class="contact-actions">
+                <a class="btn primary"
+                    href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20La%20Spezia">Richiedi una consulenza</a>
+                <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+            </div>
         </div>
     </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-menu">
-            <a href="/#siamo">Siamo</a>
-            <a href="/#facciamo">Facciamo</a>
-            <a href="/#clienti">Clienti</a>
-            <a href="/#dove">Dove</a>
-            <a href="/#contattaci">Contattaci</a>
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                <address>
+                    THREEPOINTS di Andrea Poggi<br>
+                    Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                    P.IVA 01480960457<br>
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </address>
+            </div>
+            <nav aria-label="Sezioni">
+                <p class="footer-heading">Sito</p>
+                <ul>
+                <li><a href="/#siamo">Siamo</a></li>
+                <li><a href="/#facciamo">Facciamo</a></li>
+                <li><a href="/#clienti">Clienti</a></li>
+                <li><a href="/#dove">Dove operiamo</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Zone servite">
+                <p class="footer-heading">Zone servite</p>
+                <ul>
+                <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="footer-zone">
-            <a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a>
-            <a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a>
-            <a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a>
-            <a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a>
-        </div>
-        <hr><br>
-        <address class="footer-info">
+        <div class="footer-bottom">
             <p>© All Rights Reserved.</p>
-            <p>THREEPOINTS di Andrea Poggi.</p>
-            <p>Via Lunense 23B, 54033, Marina di Carrara (MS)</p>
-            <p>P.IVA 01480960457</p>
-            <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
-        </address>
+            <p>Consulenza informatica e sviluppo software</p>
+        </div>
     </footer>
 
 </body>

@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
     <title>Consulenza Informatica e Sviluppo Software a Pisa | Threepoints</title>
     <meta name="description" content="Consulenza informatica e sviluppo software su misura a Pisa, Cascina, Pontedera e nel Valdarno. Architetture a microservizi, DevOps, app mobile e modernizzazione applicativa.">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -87,9 +91,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu&display=block" />
 
     <!-- CSS di base (in index.html è inline insieme alla schermata di caricamento) -->
     <style>
@@ -148,83 +152,148 @@
         </div>
     </nav>
 
-    <header class="hero hero-local">
-        <div class="hero-content">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <a href="/">Home</a> › Consulenza informatica Pisa
-            </nav>
-            <h1>
-                <span class="hero-title">Consulenza informatica e sviluppo software a Pisa</span>
-            </h1>
-            <p>Al servizio delle imprese pisane, dalla costa al Valdarno.</p>
+    <header class="hero-v2 hero-v2-local">
+        <div class="hero-v2-inner">
+            <div class="hero-v2-copy">
+                <nav class="hero-v2-eyebrow" data-in="fade" aria-label="Breadcrumb">
+                    <span class="hero-v2-pulse" aria-hidden="true"></span>
+                    <a href="/">Home</a> › Consulenza informatica Pisa
+                </nav>
+
+                <h1>
+                    <span class="hero-v2-title">
+                        <span class="line"><span data-in="line">Consulenza informatica e sviluppo software a Pisa<span class="tp-dots"
+                                    aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-v2-lead" data-in="fade">Al servizio delle imprese pisane, dalla costa al Valdarno.</p>
+
+                <div class="hero-v2-actions" data-in="fade">
+                    <a class="hero-v2-btn primary"
+                        href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Pisa">Richiedi una consulenza</a>
+                    <a class="hero-v2-btn ghost" href="/#facciamo">Tutti i servizi <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>
-    <section class="local-section">
-        <div class="local-section-content">
-            <h2 class="section-title">Il tuo partner IT in provincia di Pisa</h2>
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il tuo partner IT in provincia di Pisa<span class="accent">.</span></h2>
+            </div>
 
-            <p>Pisa è uno dei poli tecnologici più vivaci della Toscana, grazie a università, centri di ricerca e realtà come il polo tecnologico di Navacchio. Threepoints offre <strong>consulenza informatica</strong> e <strong>sviluppo software su misura</strong> ad aziende di Pisa, Cascina, San Giuliano Terme, Pontedera e del Valdarno.</p>
-
-            <p>Lavoriamo con startup che devono portare un prodotto sul mercato, ma anche con imprese consolidate dei distretti <strong>meccanico</strong> e della <strong>componentistica</strong> intorno a Pontedera e del <strong>distretto conciario</strong> di Santa Croce sull'Arno, che hanno bisogno di modernizzare i propri sistemi.</p>
+            <div class="prose">
+                <p>Pisa è uno dei poli tecnologici più vivaci della Toscana, grazie a università, centri di ricerca e realtà come il polo tecnologico di Navacchio. Threepoints offre <strong>consulenza informatica</strong> e <strong>sviluppo software su misura</strong> ad aziende di Pisa, Cascina, San Giuliano Terme, Pontedera e del Valdarno.</p>
+                <p>Lavoriamo con startup che devono portare un prodotto sul mercato, ma anche con imprese consolidate dei distretti <strong>meccanico</strong> e della <strong>componentistica</strong> intorno a Pontedera e del <strong>distretto conciario</strong> di Santa Croce sull'Arno, che hanno bisogno di modernizzare i propri sistemi.</p>
+            </div>
         </div>
     </section>
 
-    <section class="local-section alt">
-        <div class="local-section-content">
-            <h2 class="section-title">Come aiutiamo le aziende pisane</h2>
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Come aiutiamo le aziende pisane<span class="accent">.</span></h2>
+            </div>
 
-            <ul>
-                <li>Sviluppo di prodotti software e MVP per startup e spin-off.</li>
-                <li>Architetture a microservizi scalabili e cloud native.</li>
-                <li>Modernizzazione di gestionali e sistemi legacy per il manifatturiero.</li>
-                <li>App mobile multipiattaforma con Flutter, anche integrate con dispositivi Bluetooth.</li>
-                <li>Pipeline CI/CD, test automatici e qualità del codice.</li>
-            </ul>
+            <div class="prose">
+                <ul class="checklist">
+                    <li>Sviluppo di prodotti software e MVP per startup e spin-off.</li>
+                    <li>Architetture a microservizi scalabili e cloud native.</li>
+                    <li>Modernizzazione di gestionali e sistemi legacy per il manifatturiero.</li>
+                    <li>App mobile multipiattaforma con Flutter, anche integrate con dispositivi Bluetooth.</li>
+                    <li>Pipeline CI/CD, test automatici e qualità del codice.</li>
+                </ul>
 
-            <p>Non abbiamo uno stack tecnologico imposto: analizziamo il contesto e scegliamo gli strumenti più
-                adatti, privilegiando soluzioni open source per non legarti a nessun fornitore. Scopri tutti i
-                <a href="/#facciamo">servizi di consulenza e sviluppo software</a> e i
-                <a href="/#clienti">progetti realizzati per i nostri clienti</a>.</p>
+                <p>Non abbiamo uno stack tecnologico imposto: analizziamo il contesto e scegliamo gli strumenti più
+                    adatti, privilegiando soluzioni open source per non legarti a nessun fornitore. Scopri tutti i
+                    <a href="/#facciamo">servizi di consulenza e sviluppo software</a> e i
+                    <a href="/#clienti">progetti realizzati per i nostri clienti</a>.</p>
+            </div>
         </div>
     </section>
 
-    <section class="local-section">
-        <div class="local-section-content">
-            <h2 class="section-title">Zone servite</h2>
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Zone servite<span class="accent">.</span></h2>
+            </div>
 
-            <p>Seguiamo aziende in tutta la provincia di Pisa: Pisa, San Giuliano Terme, Cascina, Vecchiano, Calci, Pontedera, Ponsacco, Vicopisano, San Miniato, Santa Croce sull'Arno, Volterra, Marina di Pisa.</p>
+            <div class="prose">
+                <p>Seguiamo aziende in tutta la provincia di Pisa:</p>
+                <div class="towns">
+                    <span class="badge">Pisa</span>
+                    <span class="badge">San Giuliano Terme</span>
+                    <span class="badge">Cascina</span>
+                    <span class="badge">Vecchiano</span>
+                    <span class="badge">Calci</span>
+                    <span class="badge">Pontedera</span>
+                    <span class="badge">Ponsacco</span>
+                    <span class="badge">Vicopisano</span>
+                    <span class="badge">San Miniato</span>
+                    <span class="badge">Santa Croce sull'Arno</span>
+                    <span class="badge">Volterra</span>
+                    <span class="badge">Marina di Pisa</span>
+                </div>
+                <p>Operiamo anche nelle province di <a href="/consulenza-informatica-massa-carrara/">Massa-Carrara</a>, <a href="/consulenza-informatica-la-spezia/">La Spezia</a>, <a href="/consulenza-informatica-lucca/">Lucca</a> e, da remoto, in tutta Italia.</p>
+            </div>
+        </div>
+    </section>
 
-            <p>Operiamo anche nelle province di <a href="/consulenza-informatica-massa-carrara/">Massa-Carrara</a>, <a href="/consulenza-informatica-la-spezia/">La Spezia</a>, <a href="/consulenza-informatica-lucca/">Lucca</a> e, da remoto, in tutta Italia.</p>
+    <section class="section contact">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Parliamo del tuo progetto<span class="accent">.</span></h2>
+                <p class="section-lead">Raccontaci la tua esigenza: ti ricontattiamo per un primo confronto,
+                    senza impegno.</p>
+            </div>
 
-            <a class="local-cta" href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Pisa">Richiedi una consulenza</a>
+            <div class="contact-actions">
+                <a class="btn primary"
+                    href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Pisa">Richiedi una consulenza</a>
+                <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+            </div>
         </div>
     </section>
     </main>
 
     <footer class="footer">
-        <div class="footer-menu">
-            <a href="/#siamo">Siamo</a>
-            <a href="/#facciamo">Facciamo</a>
-            <a href="/#clienti">Clienti</a>
-            <a href="/#dove">Dove</a>
-            <a href="/#contattaci">Contattaci</a>
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                <address>
+                    THREEPOINTS di Andrea Poggi<br>
+                    Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                    P.IVA 01480960457<br>
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </address>
+            </div>
+            <nav aria-label="Sezioni">
+                <p class="footer-heading">Sito</p>
+                <ul>
+                <li><a href="/#siamo">Siamo</a></li>
+                <li><a href="/#facciamo">Facciamo</a></li>
+                <li><a href="/#clienti">Clienti</a></li>
+                <li><a href="/#dove">Dove operiamo</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Zone servite">
+                <p class="footer-heading">Zone servite</p>
+                <ul>
+                <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="footer-zone">
-            <a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a>
-            <a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a>
-            <a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a>
-            <a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a>
-        </div>
-        <hr><br>
-        <address class="footer-info">
+        <div class="footer-bottom">
             <p>© All Rights Reserved.</p>
-            <p>THREEPOINTS di Andrea Poggi.</p>
-            <p>Via Lunense 23B, 54033, Marina di Carrara (MS)</p>
-            <p>P.IVA 01480960457</p>
-            <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
-        </address>
+            <p>Consulenza informatica e sviluppo software</p>
+        </div>
     </footer>
 
 </body>
