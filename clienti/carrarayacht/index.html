@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
+    <title>Carrara Yacht Service: gestionale su misura per il refit di yacht | Threepoints</title>
+    <meta name="description" content="Un gestionale su misura per il refit di yacht che sostituisce i fogli Excel: dagli incontri iniziali alla POC interattiva fino al rilascio, con gestionale web e app per amministratori e operai di cantiere.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://threepoints.dev/clienti/carrarayacht/">
+    <meta name="theme-color" content="#000000">
+
+    <meta property="og:title" content="Carrara Yacht Service: gestionale su misura per il refit di yacht | Threepoints" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Threepoints" />
+    <meta property="og:description" content="Un gestionale su misura per il refit di yacht che sostituisce i fogli Excel: dagli incontri iniziali alla POC interattiva fino al rilascio, con gestionale web e app per amministratori e operai di cantiere." />
+    <meta property="og:image" content="https://threepoints.dev/images/ogimage.png" />
+    <meta property="og:url" content="https://threepoints.dev/clienti/carrarayacht/" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="/images/favicon.png" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://threepoints.dev/clienti/carrarayacht/#article",
+                "headline": "Carrara Yacht Service: gestionale su misura per il refit di yacht",
+                "description": "Un gestionale su misura per il refit di yacht che sostituisce i fogli Excel: dagli incontri iniziali alla POC interattiva fino al rilascio, con gestionale web e app per amministratori e operai di cantiere.",
+                "url": "https://threepoints.dev/clienti/carrarayacht/",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "inLanguage": "it-IT",
+                "datePublished": "2026-10-27",
+                "author": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "publisher": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "about": {
+                    "@type": "Organization",
+                    "name": "Carrara Yacht Service",
+                    "url": "https://www.carrarayacht.com/"
+                },
+                "keywords": "gestionale su misura, software su misura, refit yacht, cantiere nautico, job costing, PWA, proof of concept, Django, React, TypeScript"
+            },
+            {
+                "@type": [
+                    "ProfessionalService",
+                    "LocalBusiness"
+                ],
+                "@id": "https://threepoints.dev/#organization",
+                "name": "Threepoints",
+                "url": "https://threepoints.dev/",
+                "email": "info@threepoints.dev",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Via Lunense 23B",
+                    "postalCode": "54033",
+                    "addressLocality": "Marina di Carrara",
+                    "addressRegion": "MS",
+                    "addressCountry": "IT"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://threepoints.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Clienti",
+                        "item": "https://threepoints.dev/#clienti"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Carrara Yacht Service",
+                        "item": "https://threepoints.dev/clienti/carrarayacht/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu&display=block" />
+
+    <!-- CSS di base (in index.html è inline insieme alla schermata di caricamento) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <strong>
+                    <a href="/">THREEPOINTS</a>
+                </strong>
+            </div>
+            <div class="menu-desktop">
+                <a href="/#siamo">Siamo</a>
+                <a href="/#facciamo">Facciamo</a>
+                <a href="/#clienti">Clienti</a>
+                <a href="/#dove">Dove</a>
+                <a href="/#contattaci">Contattaci</a>
+            </div>
+            <div class="menu-mobile">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Apri il menu">
+                    <span class="material-symbols-outlined" style="color: white;">menu</span>
+                </button>
+            </div>
+        </div>
+        <div class="menu-mobile-items" id="mobile-menu">
+            <button class="close-menu" id="close-menu" aria-label="Chiudi il menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <a href="/#siamo">Siamo</a>
+            <a href="/#facciamo">Facciamo</a>
+            <a href="/#clienti">Clienti</a>
+            <a href="/#dove">Dove</a>
+            <a href="/#contattaci">Contattaci</a>
+
+            <div class="menu-mobile-footer" id="menu-mobile-footer">
+                <p>© All Rights Reserved.</p>
+                <p>THREEPOINTS di Andrea Poggi.</p>
+                <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-v2 hero-v2-local">
+        <div class="hero-v2-inner">
+            <div class="hero-v2-copy">
+                <nav class="hero-v2-eyebrow" data-in="fade" aria-label="Breadcrumb">
+                    <span class="hero-v2-pulse" aria-hidden="true"></span>
+                    <a href="/">Home</a> › <a href="/#clienti">Clienti</a> › Carrara Yacht Service
+                </nav>
+
+                <h1>
+                    <span class="hero-v2-title">
+                        <span class="line"><span data-in="line">Il refit, fuori da Excel<span class="tp-dots"
+                                    aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-v2-lead" data-in="fade">Per Carrara Yacht Service, cantiere che segue il refit degli
+                    yacht dall'alaggio al varo, abbiamo sviluppato un gestionale su misura: stato delle barche,
+                    lavorazioni, costi e margini in un unico sistema, con un'app per chi lavora in cantiere.</p>
+
+                <div class="hero-v2-actions" data-in="fade">
+                    <a class="hero-v2-btn primary"
+                        href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Gestionale%20su%20misura">Hai un progetto simile? Parliamone</a>
+                    <a class="hero-v2-btn ghost" href="https://www.carrarayacht.com/" target="_blank" rel="noopener">Sito di Carrara Yacht Service <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- In breve: scheda del progetto e numeri principali -->
+    <section class="section case-summary">
+        <div class="section-inner">
+            <div class="case-facts" id="carrarayacht">
+                <div class="case-facts-logo">
+                    <img src="/images/cys.png" alt="Logo Carrara Yacht Service" width="120" height="88">
+                </div>
+                <dl>
+                    <div>
+                        <dt>Settore</dt>
+                        <dd>Nautica: refit di yacht</dd>
+                    </div>
+                    <div>
+                        <dt>Durata</dt>
+                        <dd>Fase 1 in circa 3 mesi, Fase 2 in corso</dd>
+                    </div>
+                    <div>
+                        <dt>Team</dt>
+                        <dd>Andrea Poggi</dd>
+                    </div>
+                    <div>
+                        <dt>Il nostro ruolo</dt>
+                        <dd>Analisi, POC interattiva, sviluppo e rilascio</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <ul class="case-stats">
+                <li class="stat">
+                    <strong>3</strong>
+                    <span>applicazioni: gestionale web, app per l'amministratore e app per gli operai</span>
+                </li>
+                <li class="stat">
+                    <strong>9</strong>
+                    <span>stati del ciclo di refit, dalla quotazione alla consegna</span>
+                </li>
+                <li class="stat">
+                    <strong>500+</strong>
+                    <span>test automatici sul backend</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il contesto<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <p class="big">Carrara Yacht Service teneva traccia di ogni refit su fogli Excel, uno per barca.</p>
+                <p>Le lavorazioni le eseguono sia gli <strong>operai interni</strong> sia
+                    <strong>aziende terze</strong>. A fine giornata gli operai compilavano un foglio cartaceo, che
+                    poi qualcuno trascriveva periodicamente in Excel.</p>
+                <p>Il dato c'era, ma era <strong>frammentato</strong>, arrivava in ritardo ed era difficile da
+                    analizzare: sapere a che punto fosse una barca o quanto rendesse un refit richiedeva lavoro
+                    manuale.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">La sfida<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <ul class="checklist">
+                    <li><span><strong>Una sola fonte di verità.</strong> Stato delle barche, lavorazioni, costi,
+                            ricavi e documenti in un unico sistema, al posto di decine di fogli.</span></li>
+                    <li><span><strong>Chi lavora in cantiere non sta alla scrivania.</strong> Registrare una
+                            lavorazione dal telefono deve richiedere pochi secondi, e l'operaio non deve vedere
+                            importi.</span></li>
+                    <li><span><strong>Conti che tornano.</strong> I costi già registrati non devono cambiare se
+                            cambia una tariffa, e i margini devono essere calcolati senza errori di
+                            arrotondamento.</span></li>
+                    <li><span><strong>Più aziende, dati separati.</strong> Lo stesso sistema serve anche aziende
+                            collegate, senza che i dati di una siano visibili dall'altra.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark has-grid">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">L'approccio<span class="accent">.</span></h2>
+                <p class="section-lead">Prima capire, poi <strong>far toccare con mano</strong>, solo dopo
+                    sviluppare: ogni passo riduce il rischio di costruire la cosa sbagliata.</p>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    <span class="step-num">01</span>
+                    <h3>Incontri iniziali</h3>
+                    <p>Studio del lavoro in cantiere e del flusso attuale, fino a un documento dei requisiti
+                        condiviso, con priorità e due fasi di consegna.</p>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <h3>POC interattiva</h3>
+                    <p>Schermate navigabili per provare il gestionale prima di svilupparlo, e correggere la
+                        rotta quando costa poco.</p>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <h3>Sviluppo per milestone</h3>
+                    <p>Prima le fondamenta (aziende, accessi, anagrafiche), poi refit e costi, ricavi e margini,
+                        infine dashboard e app di cantiere.</p>
+                </li>
+                <li>
+                    <span class="step-num">04</span>
+                    <h3>Collaudo sui dati veri</h3>
+                    <p>Un ambiente di collaudo, con una copia dei dati reali, dove il cliente prova ogni
+                        versione prima che diventi la sua.</p>
+                </li>
+                <li>
+                    <span class="step-num">05</span>
+                    <h3>Rilascio e Fase 2</h3>
+                    <p>Messa in produzione della prima fase, poi l'estensione alla gestione del cantiere.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">La soluzione<span class="accent">.</span></h2>
+                <p class="section-lead">Tre applicazioni su un'unica API: <strong>persone diverse, in posti
+                        diversi</strong>, ognuna con lo strumento adatto al proprio lavoro.</p>
+            </div>
+
+            <figure class="arch" aria-label="Schema della soluzione">
+                <div class="arch-layer services">
+                    <p class="arch-label">Applicazioni</p>
+                    <ul class="arch-items">
+                        <li class="arch-item">Gestionale web<small>amministrazione, alla scrivania</small></li>
+                        <li class="arch-item">App amministratore<small>refit e incassi, dal telefono</small></li>
+                        <li class="arch-item">App operatore<small>registrazione delle ore, in cantiere</small></li>
+                    </ul>
+                </div>
+                <div class="arch-layer">
+                    <p class="arch-label">Servizi</p>
+                    <ul class="arch-items">
+                        <li class="arch-item poc">API REST<small>regole del refit, costi e margini, per azienda</small></li>
+                    </ul>
+                </div>
+                <div class="arch-layer external">
+                    <p class="arch-label">Dati</p>
+                    <ul class="arch-items">
+                        <li class="arch-item">Database<small>barche, refit, costi e ricavi</small></li>
+                        <li class="arch-item">Archivio documenti<small>fatture, DDT, foto</small></li>
+                        <li class="arch-item">Email<small>accessi e notifiche</small></li>
+                    </ul>
+                </div>
+                <figcaption>Vista semplificata dell'architettura.</figcaption>
+            </figure>
+
+            <div class="arch-notes">
+                <div>
+                    <h3>Tre app, non una sola</h3>
+                    <p>La scrivania e il cantiere non si somigliano: invece di un'unica app che si adatta a
+                        tutto, ogni profilo ha la sua, semplice e mirata.</p>
+                </div>
+                <div>
+                    <h3>Gli importi non arrivano all'operaio</h3>
+                    <p>Non sono nascosti nell'interfaccia: l'app degli operai usa servizi separati, che costi e
+                        tariffe non li restituiscono proprio.</p>
+                </div>
+                <div>
+                    <h3>Entrare senza password</h3>
+                    <p>L'operaio attiva il telefono una volta sola da un link ricevuto per email, poi entra con
+                        un PIN di quattro cifre.</p>
+                </div>
+                <div>
+                    <h3>Il ciclo del refit</h3>
+                    <p>Ogni barca avanza uno stato alla volta, e alcuni passaggi chiedono prima una checklist
+                        e i documenti necessari. Ogni cambio resta nella storia del refit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">I risultati<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <ul class="checklist">
+                    <li>La prima fase è in produzione: fogli Excel e foglio cartaceo sono sostituiti da un unico
+                        sistema.</li>
+                    <li>Gli operai registrano le proprie lavorazioni dal telefono, direttamente in cantiere.</li>
+                    <li>Costi, ricavi e margine di ogni refit sono sempre aggiornati, per barca e per azienda.</li>
+                    <li>Una dashboard mostra a colpo d'occhio lo stato del cantiere e cosa richiede attenzione.</li>
+                    <li>In sviluppo la seconda fase: mappa del cantiere, parco mezzi, scadenzario e costi di
+                        cantiere.</li>
+                </ul>
+
+                <div class="badges">
+                    <span class="badge">Django</span>
+                    <span class="badge">Django REST Framework</span>
+                    <span class="badge">React</span>
+                    <span class="badge">TypeScript</span>
+                    <span class="badge">PWA</span>
+                    <span class="badge">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Gestisci ancora il lavoro su Excel<span class="accent">?</span></h2>
+                <p class="section-lead">Raccontaci come lavori oggi: partiamo dai tuoi fogli e dai tuoi processi
+                    e ti proponiamo un gestionale su misura, senza impegno.</p>
+            </div>
+
+            <div class="contact-actions">
+                <a class="btn primary"
+                    href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Gestionale%20su%20misura">Richiedi una consulenza</a>
+                <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                <address>
+                    THREEPOINTS di Andrea Poggi<br>
+                    Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                    P.IVA 01480960457<br>
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </address>
+            </div>
+            <nav aria-label="Sezioni">
+                <p class="footer-heading">Sito</p>
+                <ul>
+                <li><a href="/#siamo">Siamo</a></li>
+                <li><a href="/#facciamo">Facciamo</a></li>
+                <li><a href="/#clienti">Clienti</a></li>
+                <li><a href="/#dove">Dove operiamo</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Zone servite">
+                <p class="footer-heading">Zone servite</p>
+                <ul>
+                <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>© All Rights Reserved.</p>
+            <p>Consulenza informatica e sviluppo software</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

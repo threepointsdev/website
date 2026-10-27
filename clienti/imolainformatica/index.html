@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
+    <title>Imola Informatica: architettura, automazione e pagamenti | Threepoints</title>
+    <meta name="description" content="Una collaborazione di lunga data con Imola Informatica: analisi architetturali, progettazione di una piattaforma per automatizzare il provisioning dell'infrastruttura e passaggio di un'architettura di pagamenti da sincrona ad asincrona.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://threepoints.dev/clienti/imolainformatica/">
+    <meta name="theme-color" content="#000000">
+
+    <meta property="og:title" content="Imola Informatica: architettura, automazione e pagamenti | Threepoints" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Threepoints" />
+    <meta property="og:description" content="Una collaborazione di lunga data con Imola Informatica: analisi architetturali, progettazione di una piattaforma per automatizzare il provisioning dell'infrastruttura e passaggio di un'architettura di pagamenti da sincrona ad asincrona." />
+    <meta property="og:image" content="https://threepoints.dev/images/ogimage.png" />
+    <meta property="og:url" content="https://threepoints.dev/clienti/imolainformatica/" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="/images/favicon.png" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://threepoints.dev/clienti/imolainformatica/#article",
+                "headline": "Imola Informatica: architettura, automazione e pagamenti",
+                "description": "Una collaborazione di lunga data con Imola Informatica: analisi architetturali, progettazione di una piattaforma per automatizzare il provisioning dell'infrastruttura e passaggio di un'architettura di pagamenti da sincrona ad asincrona.",
+                "url": "https://threepoints.dev/clienti/imolainformatica/",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "inLanguage": "it-IT",
+                "datePublished": "2026-10-27",
+                "author": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "publisher": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "about": {
+                    "@type": "Organization",
+                    "name": "Imola Informatica",
+                    "url": "https://imolainformatica.it/"
+                },
+                "keywords": "architettura software, analisi architetturale, C4 Model, automazione infrastruttura, provisioning, architetture asincrone, pagamenti, Spring Boot, consulenza IT"
+            },
+            {
+                "@type": [
+                    "ProfessionalService",
+                    "LocalBusiness"
+                ],
+                "@id": "https://threepoints.dev/#organization",
+                "name": "Threepoints",
+                "url": "https://threepoints.dev/",
+                "email": "info@threepoints.dev",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Via Lunense 23B",
+                    "postalCode": "54033",
+                    "addressLocality": "Marina di Carrara",
+                    "addressRegion": "MS",
+                    "addressCountry": "IT"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://threepoints.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Clienti",
+                        "item": "https://threepoints.dev/#clienti"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "Imola Informatica",
+                        "item": "https://threepoints.dev/clienti/imolainformatica/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=close,menu&display=block" />
+
+    <!-- CSS di base (in index.html è inline insieme alla schermata di caricamento) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <strong>
+                    <a href="/">THREEPOINTS</a>
+                </strong>
+            </div>
+            <div class="menu-desktop">
+                <a href="/#siamo">Siamo</a>
+                <a href="/#facciamo">Facciamo</a>
+                <a href="/#clienti">Clienti</a>
+                <a href="/#dove">Dove</a>
+                <a href="/#contattaci">Contattaci</a>
+            </div>
+            <div class="menu-mobile">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Apri il menu">
+                    <span class="material-symbols-outlined" style="color: white;">menu</span>
+                </button>
+            </div>
+        </div>
+        <div class="menu-mobile-items" id="mobile-menu">
+            <button class="close-menu" id="close-menu" aria-label="Chiudi il menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <a href="/#siamo">Siamo</a>
+            <a href="/#facciamo">Facciamo</a>
+            <a href="/#clienti">Clienti</a>
+            <a href="/#dove">Dove</a>
+            <a href="/#contattaci">Contattaci</a>
+
+            <div class="menu-mobile-footer" id="menu-mobile-footer">
+                <p>© All Rights Reserved.</p>
+                <p>THREEPOINTS di Andrea Poggi.</p>
+                <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-v2 hero-v2-local">
+        <div class="hero-v2-inner">
+            <div class="hero-v2-copy">
+                <nav class="hero-v2-eyebrow" data-in="fade" aria-label="Breadcrumb">
+                    <span class="hero-v2-pulse" aria-hidden="true"></span>
+                    <a href="/">Home</a> › <a href="/#clienti">Clienti</a> › Imola Informatica
+                </nav>
+
+                <h1>
+                    <span class="hero-v2-title">
+                        <span class="line"><span data-in="line">Da colleghi a partner<span class="tp-dots"
+                                    aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-v2-lead" data-in="fade">Con Imola Informatica lavoriamo da sempre: prima come
+                    dipendenti, poi come professionisti indipendenti. Oggi progettiamo insieme piattaforme di
+                    automazione e architetture per i pagamenti.</p>
+
+                <div class="hero-v2-actions" data-in="fade">
+                    <a class="hero-v2-btn primary"
+                        href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Architettura%20e%20automazione">Lavoriamo insieme</a>
+                    <a class="hero-v2-btn ghost" href="https://imolainformatica.it/" target="_blank" rel="noopener">Sito di Imola Informatica <span aria-hidden="true">↗</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- In breve: scheda della collaborazione -->
+    <section class="section case-summary">
+        <div class="section-inner">
+            <div class="case-facts" id="imolainformatica">
+                <div class="case-facts-logo">
+                    <img src="/images/imola.webp" alt="Logo Imola Informatica" width="244" height="90">
+                </div>
+                <dl>
+                    <div>
+                        <dt>Settore</dt>
+                        <dd>Consulenza e servizi IT</dd>
+                    </div>
+                    <div>
+                        <dt>Collaborazione</dt>
+                        <dd>Da sempre: prima da dipendenti, poi da professionisti</dd>
+                    </div>
+                    <div>
+                        <dt>Progetti</dt>
+                        <dd>Analisi architetturali, automazione dell'infrastruttura, pagamenti</dd>
+                    </div>
+                    <div>
+                        <dt>Il nostro ruolo</dt>
+                        <dd>Analisi, architettura e sviluppo</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il rapporto<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <p class="big">Imola Informatica è dove abbiamo iniziato: ci abbiamo lavorato da dipendenti, prima
+                    ancora di aprire la partita IVA.</p>
+                <p>Quando siamo diventati professionisti indipendenti la collaborazione è continuata. Oggi
+                    lavoriamo al loro fianco come <strong>consulenti esterni</strong>, su progetti di
+                    <strong>analisi</strong>, <strong>architettura</strong> e <strong>sviluppo</strong>.</p>
+                <p>Conoscere da anni persone, metodi e contesti ci permette di entrare in un nuovo progetto
+                    senza tempi di rodaggio.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark has-grid">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">I progetti<span class="accent">.</span></h2>
+                <p class="section-lead">Negli anni i progetti sono stati molti. Questi sono quelli che
+                    raccontano meglio <strong>come lavoriamo</strong>.</p>
+            </div>
+
+            <ol class="steps steps-3">
+                <li>
+                    <span class="step-num">01</span>
+                    <h3>Analisi e modernizzazione</h3>
+                    <p>Analisi architetturali e tecniche di servizi esistenti, per individuare i componenti da
+                        ottimizzare e modernizzare, e implementazione delle migliorie.</p>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <h3>Una piattaforma per l'infrastruttura</h3>
+                    <p>Progettazione di una piattaforma che automatizza il <strong>provisioning</strong> delle
+                        risorse infrastrutturali e che team esterni possono estendere con le proprie
+                        automazioni.</p>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <h3>Pagamenti asincroni</h3>
+                    <p>Trasformazione di un'architettura di pagamenti da <strong>sincrona</strong> ad
+                        <strong>asincrona</strong>.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Automatizzare l'infrastruttura<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <p class="big">Stiamo progettando con Imola Informatica una piattaforma che automatizza il
+                    provisioning delle risorse infrastrutturali.</p>
+                <p>L'obiettivo è duplice: offrire <strong>automazioni pronte</strong> per le richieste più
+                    comuni e permettere a <strong>team esterni</strong> di sviluppare le proprie.</p>
+                <ul class="checklist">
+                    <li><span><strong>Provisioning senza passaggi manuali.</strong> Le risorse si richiedono e si
+                            ottengono attraverso automazioni, non con richieste da evadere a mano.</span></li>
+                    <li><span><strong>Aperta a chi la usa.</strong> I team esterni possono scrivere le proprie
+                            automazioni e renderle disponibili sulla piattaforma.</span></li>
+                    <li><span><strong>Regole comuni.</strong> Ogni automazione rispetta lo stesso contratto, per
+                            restare affidabile, tracciabile e manutenibile anche quando a scriverla è un altro
+                            team.</span></li>
+                </ul>
+                <p>Il progetto è in corso, in fase di progettazione.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Pagamenti: da sincroni ad asincroni<span class="accent">.</span></h2>
+                <p class="section-lead">Un'architettura di pagamenti in cui ogni passaggio aspetta il successivo,
+                    ripensata perché <strong>ogni componente lavori con i propri tempi</strong>.</p>
+            </div>
+
+            <div class="arch-notes">
+                <div>
+                    <h3>Prima: una catena sincrona</h3>
+                    <p>Ogni passaggio attende la risposta del successivo. Basta un sistema lento o non
+                        disponibile per rallentare o bloccare l'intera catena.</p>
+                </div>
+                <div>
+                    <h3>Dopo: un flusso asincrono</h3>
+                    <p>La richiesta viene presa in carico subito e i passaggi successivi procedono tramite
+                        messaggi. Un rallentamento resta circoscritto e non si propaga.</p>
+                </div>
+            </div>
+
+            <div class="arch-notes">
+                <div>
+                    <h3>Cosa non può cambiare</h3>
+                    <p>Sui pagamenti l'asincronia non può costare in affidabilità: nessun pagamento perso,
+                        nessun pagamento eseguito due volte, errori e nuovi tentativi gestiti in modo
+                        controllato.</p>
+                </div>
+                <div>
+                    <h3>Lo stato, sempre visibile</h3>
+                    <p>Chi ha avviato un pagamento non aspetta più la risposta finale, ma deve poterne
+                        conoscere lo stato in ogni momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il nostro contributo<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <ul class="checklist">
+                    <li>Analisi dei servizi esistenti, documentata con il C4 Model, per decidere dove intervenire.</li>
+                    <li>Progettazione di piattaforme e architetture, condivisa e confrontata con i team.</li>
+                    <li>Implementazione delle migliorie, non solo la loro proposta.</li>
+                    <li>Continuità: un rapporto che dura da prima di Threepoints.</li>
+                </ul>
+
+                <div class="badges">
+                    <span class="badge">Analisi architetturale - C4 Model</span>
+                    <span class="badge">Architetture asincrone</span>
+                    <span class="badge">Automazione dell'infrastruttura</span>
+                    <span class="badge">Spring Boot</span>
+                    <span class="badge">Oracle</span>
+                    <span class="badge">REST API</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Cerchi un partner, non solo un fornitore<span class="accent">?</span></h2>
+                <p class="section-lead">Analisi, architettura e sviluppo: raccontaci il tuo contesto e ti
+                    proponiamo come lavorare insieme, senza impegno.</p>
+            </div>
+
+            <div class="contact-actions">
+                <a class="btn primary"
+                    href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Architettura%20e%20automazione">Richiedi una consulenza</a>
+                <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                <address>
+                    THREEPOINTS di Andrea Poggi<br>
+                    Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                    P.IVA 01480960457<br>
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </address>
+            </div>
+            <nav aria-label="Sezioni">
+                <p class="footer-heading">Sito</p>
+                <ul>
+                <li><a href="/#siamo">Siamo</a></li>
+                <li><a href="/#facciamo">Facciamo</a></li>
+                <li><a href="/#clienti">Clienti</a></li>
+                <li><a href="/#dove">Dove operiamo</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Zone servite">
+                <p class="footer-heading">Zone servite</p>
+                <ul>
+                <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>© All Rights Reserved.</p>
+            <p>Consulenza informatica e sviluppo software</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

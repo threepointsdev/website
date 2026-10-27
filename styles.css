@@ -838,7 +838,7 @@ img {
 .clients {
     margin-top: 64px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
@@ -872,6 +872,10 @@ img {
 
 #tis {
     --client: #702F8A;
+}
+
+#carrarayacht {
+    --client: #a8774f;
 }
 
 .cliente-card:hover {
@@ -1219,6 +1223,10 @@ img {
     margin-top: 32px;
 }
 
+.prose .checklist + p {
+    margin-top: 24px;
+}
+
 .steps {
     margin-top: 64px;
     display: grid;
@@ -1227,6 +1235,10 @@ img {
     list-style: none;
     background: rgba(255, 255, 255, .1);
     border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.steps.steps-3 {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .steps li {
@@ -1520,7 +1532,8 @@ img {
     .places,
     .values,
     .case-stats,
-    .steps {
+    .steps,
+    .steps.steps-3 {
         grid-template-columns: 1fr;
     }
 
