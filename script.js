@@ -52,7 +52,7 @@ async function playHeroEntrance() {
 
 // Comparsa dei blocchi delle sezioni durante lo scroll: blocchi piccoli (titoli,
 // card, domande) e non sezioni intere, solo transform e opacity, una volta sola
-const SECTION_ITEMS = '.section-head, .prose, .svc, .value, .cliente-card, .place, .remote, .faq-list details, .contact-actions';
+const SECTION_ITEMS = '.section-head, .prose, .svc, .value, .cliente-card, .place, .remote, .faq-list details, .contact-actions, .case-facts, .stat, .steps li, .arch-layer, .arch-notes > div';
 
 function setupSectionReveal() {
     const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

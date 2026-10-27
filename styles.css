@@ -291,9 +291,9 @@ img {
 }
 
 .hero-v2-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
+    /* Testo normale e non flex: con gap ogni pezzo di testo del percorso
+       (Home › Clienti › …) diventerebbe un elemento con spaziature irregolari */
+    display: block;
     font-size: .85rem;
     font-weight: 500;
     letter-spacing: .16em;
@@ -308,8 +308,12 @@ img {
 
 .hero-v2-pulse {
     position: relative;
-    flex: 0 0 8px;
+    display: inline-block;
+    width: 8px;
     height: 8px;
+    /* Insieme allo spazio nel markup fa circa 12px prima del testo */
+    margin: 0 6px 2px 0;
+    vertical-align: middle;
     border-radius: 50%;
     background: var(--tp-orange);
 }
@@ -663,6 +667,11 @@ img {
 .dark .section-lead,
 .contact .section-lead {
     color: rgba(255, 255, 255, .7);
+}
+
+.dark .section-lead strong,
+.contact .section-lead strong {
+    color: #fff;
 }
 
 .split {
@@ -1105,6 +1114,266 @@ img {
 }
 
 
+/* Casi di studio ---------------------------------------------------------- */
+
+.cliente-link {
+    align-self: flex-start;
+    margin-top: 24px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--tp-orange);
+    color: var(--tp-ink);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.cliente-link:hover {
+    color: var(--tp-orange);
+}
+
+.case-summary {
+    padding-top: 80px;
+}
+
+.case-facts {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 48px;
+    padding: 36px 40px;
+    background: #fff;
+    border: 1px solid var(--tp-line);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.case-facts::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--client, var(--tp-orange));
+}
+
+.case-facts-logo img {
+    display: block;
+    width: auto;
+    max-width: 180px;
+    height: auto;
+}
+
+.case-facts dl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.case-facts dt {
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--tp-muted);
+}
+
+.case-facts dd {
+    margin-top: 6px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.case-stats {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    list-style: none;
+}
+
+.stat {
+    padding: 28px 32px;
+    border-top: 3px solid var(--tp-orange);
+    background: var(--tp-paper-2);
+    border-radius: 0 0 6px 6px;
+}
+
+.stat strong {
+    display: block;
+    font-size: clamp(2.6rem, 5vw, 3.8rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -.03em;
+}
+
+.stat span {
+    display: block;
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--tp-text);
+}
+
+.prose .checklist + .badges {
+    margin-top: 32px;
+}
+
+.steps {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1px;
+    list-style: none;
+    background: rgba(255, 255, 255, .1);
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.steps li {
+    padding: 36px 28px 40px;
+    background: var(--tp-ink);
+}
+
+.step-num {
+    font-size: .85rem;
+    font-weight: 500;
+    letter-spacing: .12em;
+    color: var(--tp-orange);
+}
+
+.steps h3 {
+    margin-top: 20px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #fff;
+}
+
+.steps p {
+    margin-top: 12px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .68);
+}
+
+.steps strong {
+    font-weight: 500;
+    color: #fff;
+}
+
+
+.arch {
+    margin-top: 64px;
+    display: grid;
+    gap: 12px;
+}
+
+.arch-layer {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    gap: 24px;
+}
+
+.arch-label {
+    font-size: .75rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--tp-muted);
+}
+
+.arch-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+.arch-item {
+    flex: 1 1 0;
+    min-width: 150px;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid var(--tp-line);
+    border-radius: 6px;
+    font-size: .98rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
+.arch-item small {
+    display: block;
+    margin-top: 4px;
+    font-size: .82rem;
+    font-weight: 300;
+    color: var(--tp-muted);
+}
+
+/* Applicazioni su una griglia fissa, tutte della stessa larghezza */
+.arch-layer.services .arch-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.arch-layer.services .arch-item {
+    min-width: 0;
+    border-top: 3px solid var(--tp-orange);
+}
+
+.arch-item.poc {
+    background: var(--tp-ink);
+    border-color: var(--tp-ink);
+    color: #fff;
+}
+
+.arch-layer.services .arch-item.poc {
+    border-top-color: var(--tp-orange);
+}
+
+.arch-item.poc small {
+    color: var(--tp-orange);
+    font-weight: 500;
+}
+
+.arch-layer.bus .arch-item {
+    background: rgba(245, 124, 0, .08);
+    border: 1px dashed var(--tp-orange);
+}
+
+.arch-layer.external .arch-item {
+    background: var(--tp-paper-2);
+    font-weight: 400;
+    color: var(--tp-text);
+}
+
+.arch figcaption {
+    margin-top: 8px;
+    font-size: .9rem;
+    color: var(--tp-muted);
+}
+
+.arch-notes {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--tp-line);
+}
+
+.arch-notes h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.arch-notes p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--tp-text);
+}
+
 /* Footer ------------------------------------------------------------------ */
 
 .footer {
@@ -1196,6 +1465,21 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .case-facts {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .case-facts dl,
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .arch-notes {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
     .split {
         grid-template-columns: 1fr;
         gap: 32px;
@@ -1234,7 +1518,26 @@ img {
 
     .svc-grid,
     .places,
-    .values {
+    .values,
+    .case-stats,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .case-facts {
+        padding: 28px 24px;
+    }
+
+    .arch-layer {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .arch-item {
+        min-width: calc(50% - 4px);
+    }
+
+    .arch-layer.services .arch-items {
         grid-template-columns: 1fr;
     }
 

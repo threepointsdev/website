@@ -6,6 +6,11 @@
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://threepoints.dev/clienti/apuacom/</loc>
+        <lastmod>2026-10-27</lastmod>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://threepoints.dev/consulenza-informatica-massa-carrara/</loc>
         <lastmod>2026-10-27</lastmod>
         <priority>0.8</priority>
