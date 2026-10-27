@@ -1,13 +1,17 @@
 // script.js
 window.addEventListener('load', function () {
     // Nascondi la schermata di caricamento con un effetto di dissolvenza
+    // Le pagine locali non hanno la schermata di caricamento
     const loadingScreen = document.getElementById('loading-screen');
-    loadingScreen.style.opacity = '0';
-
-    loadingScreen.style.display = 'none';
+    if (loadingScreen) {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.display = 'none';
+    }
     // Mostra il contenuto del sito con un effetto di dissolvenza
     const siteContent = document.getElementById('site-content');
-    siteContent.style.display = 'block';
+    if (siteContent) {
+        siteContent.style.display = 'block';
+    }
   
 });
 

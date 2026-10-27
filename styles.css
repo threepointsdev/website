@@ -233,8 +233,24 @@
     /* Sposta il testo verso l'alto */
 }
 
-.hero strong {
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.hero-kicker {
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: .9;
+}
+
+.hero-title {
     font-size: 82px;
+    line-height: 1.2;
     /* Dimensione del titolo */
     margin-bottom: 1rem;
     /* Spazio sotto il titolo */
@@ -290,7 +306,11 @@
 
 /* Dimensioni del testo per dispositivi mobili */
 @media (max-width: 759px) {
-    .hero strong {
+    .hero-kicker {
+        font-size: 18px;
+    }
+
+    .hero-title {
         font-size: 60px;
         /* Dimensione del titolo per mobile */
     }
@@ -368,8 +388,9 @@ p {
     /* Allinea il testo a sinistra */
     font-size: 2.5rem;
     /* Dimensione del titolo */
-    font-weight: 500;
+    font-weight: 700;
     /* Grassetto */
+    line-height: 1.3;
     margin-bottom: 1rem;
 }
 
@@ -397,7 +418,7 @@ p {
     color: #F57C00;
 }
 
-.facciamo-text h1 {
+.facciamo-text h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 500;
@@ -448,7 +469,7 @@ p {
         /* Dispone l'icona sopra il testo sui dispositivi mobili */
     }
 
-    .facciamo-text h1 {
+    .facciamo-text h3 {
         margin-left: 80px;
     }
 
@@ -638,7 +659,7 @@ p {
     /* Spazio per lasciare spazio all'icona di sfondo */
 }
 
-.scegliamo-text h1 {
+.scegliamo-text h3 {
     font-size: 1.8rem;
     margin-bottom: 10px;
     font-weight: 500;
@@ -765,12 +786,14 @@ p {
 
 .cliente-logo {
     width: 160px;
+    height: auto;
     /* Dimensione dell'icona del logo */
     margin-bottom: 15px;
 }
 
 .cliente-title {
     font-size: 1.5rem;
+    line-height: 1.3;
     margin-bottom: 10px;
     color: #000;
 }
@@ -1053,4 +1076,220 @@ background-color: #E1F5FE; /* Azzurro chiarissimo */
 .footer-info a:hover {
     text-decoration: underline;
     /* Sottolinea il link al passaggio del mouse */
+}
+
+/* Sezioni Dove operiamo, FAQ e pagine locali */
+#dove,
+#faq,
+.local-section {
+    text-align: left;
+}
+
+#faq,
+.local-section.alt {
+    background-color: #f4f4f4;
+}
+
+.dove-section-content p,
+.faq-section-content p,
+.local-section-content p {
+    font-weight: 300;
+}
+
+.dove-section-content > p {
+    margin-top: 40px;
+}
+
+.dove-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.dove-card {
+    display: block;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    border-left: 4px solid #F57C00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dove-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dove-card span {
+    font-size: 40px;
+    color: #F57C00;
+}
+
+.dove-card h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.dove-card p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.faq-section-content details {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.faq-section-content details:first-of-type {
+    margin-top: 40px;
+}
+
+.faq-section-content summary {
+    font-size: 1.3rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.faq-section-content details p {
+    margin-top: 12px;
+}
+
+.faq-section-content a,
+.local-section-content a {
+    color: #F57C00;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.faq-section-content a:hover,
+.local-section-content a:hover {
+    text-decoration: underline;
+}
+
+.local-section-content p {
+    margin-top: 24px;
+}
+
+.local-section-content ul {
+    margin: 24px 0 0 24px;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.local-section-content li {
+    margin-bottom: 8px;
+}
+
+.local-cta {
+    display: inline-block;
+    margin-top: 32px;
+    padding: 14px 28px;
+    background-color: #F57C00;
+    border-radius: 6px;
+    color: #fff !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.local-cta:hover {
+    background-color: #E65100;
+}
+
+.hero.hero-local {
+    min-height: 70vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-local .hero-content {
+    margin-top: 0;
+}
+
+.hero-local .hero-title {
+    font-size: 56px;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.breadcrumb a {
+    color: #F57C00;
+    text-decoration: none;
+}
+
+.footer-zone {
+    margin-bottom: 20px;
+}
+
+.footer-zone a {
+    display: inline-block;
+    color: #fff;
+    opacity: .7;
+    margin: 4px 12px;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.footer-zone a:hover {
+    text-decoration: underline;
+}
+
+address.footer-info {
+    font-style: normal;
+}
+
+@media(min-width: 759px) {
+    #dove,
+    #faq,
+    .local-section {
+        padding: 100px;
+    }
+
+    .dove-section-content,
+    .faq-section-content,
+    .local-section-content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 1100px) {
+    .dove-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 759px) {
+    #dove,
+    #faq,
+    .local-section {
+        padding: 100px 19px;
+    }
+
+    .dove-section-content,
+    .faq-section-content,
+    .local-section-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .dove-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-local .hero-title {
+        font-size: 40px;
+    }
 }
