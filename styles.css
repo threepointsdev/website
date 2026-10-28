@@ -90,6 +90,17 @@ img {
     text-underline-offset: 6px;
 }
 
+.logo a {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+}
+
+.logo-mark {
+    height: 1.9rem;
+    width: auto;
+}
+
 .menu-desktop {
     display: none;
 }
