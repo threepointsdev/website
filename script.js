@@ -86,11 +86,10 @@ window.addEventListener('load', async function () {
     const siteContent = document.getElementById('site-content');
 
     try {
-        // Mostra il contenuto sotto la schermata di caricamento: la lettura di
-        // offsetHeight forza il layout, così il browser richiede subito i font
+        // Mostra il contenuto sotto la schermata di caricamento: il layout lo calcola
+        // il browser al prossimo fotogramma, senza leggere proprietà geometriche qui
         if (siteContent) {
             siteContent.style.display = 'block';
-            void siteContent.offsetHeight;
         }
 
         await heroFontsLoaded();
