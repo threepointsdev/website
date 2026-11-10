@@ -14,3 +14,7 @@ generato con [csso](https://github.com/css/csso): dopo ogni modifica a `styles.c
 ```bash
 npx csso-cli styles.css -o styles.min.css
 ```
+
+# Biglietto da visita nel Wallet
+Pass per Apple Wallet e Google Wallet generati dagli script in `_wallet/`: istruzioni in
+[`_wallet/README.md`](_wallet/README.md).

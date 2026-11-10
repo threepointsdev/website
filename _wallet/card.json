@@ -1,0 +1,28 @@
+{
+    "slug": "andrea-poggi",
+    "nome": "Andrea",
+    "cognome": "Poggi",
+    "ruolo": "Fondatore",
+    "organizzazione": "Threepoints",
+    "telefono": "TODO",
+    "email": "info@threepoints.dev",
+    "sito": "https://threepoints.dev/",
+    "linkedin": "",
+    "indirizzo": {
+        "via": "Via Lunense 23B",
+        "cap": "54033",
+        "citta": "Marina di Carrara",
+        "provincia": "MS",
+        "paese": "Italia"
+    },
+    "partitaIva": "IT01480960457",
+    "foto": "",
+    "apple": {
+        "passTypeIdentifier": "pass.dev.threepoints.card",
+        "teamIdentifier": "TODO"
+    },
+    "google": {
+        "issuerId": "TODO",
+        "classe": "biglietto_da_visita"
+    }
+}
