@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="it" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stato iniziale dell'ingresso: impostato prima del primo disegno.
+         Senza JavaScript la classe non c'è e il contenuto è subito visibile. -->
+    <script>document.documentElement.classList.add('pre')</script>
+
+    <title>MPART: termosaldatrice interconnessa per Industria 4.0 | Threepoints</title>
+    <meta name="description" content="Un software che collega la termosaldatrice di MPART al server aziendale via OPC UA: le commesse partono dall'ufficio e ogni saldatura viene registrata con i suoi parametri, per l'interconnessione richiesta da Industria 4.0.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://threepoints.dev/clienti/mpart/">
+    <meta name="theme-color" content="#000000">
+
+    <meta property="og:title" content="MPART: termosaldatrice interconnessa per Industria 4.0 | Threepoints" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="Threepoints" />
+    <meta property="og:description" content="Un software che collega la termosaldatrice di MPART al server aziendale via OPC UA: le commesse partono dall'ufficio e ogni saldatura viene registrata con i suoi parametri, per l'interconnessione richiesta da Industria 4.0." />
+    <meta property="og:image" content="https://threepoints.dev/images/ogimage.png" />
+    <meta property="og:url" content="https://threepoints.dev/clienti/mpart/" />
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="/images/logo-mark.svg" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Article",
+                "@id": "https://threepoints.dev/clienti/mpart/#article",
+                "headline": "MPART: termosaldatrice interconnessa per Industria 4.0",
+                "description": "Un software che collega la termosaldatrice di MPART al server aziendale via OPC UA: le commesse partono dall'ufficio e ogni saldatura viene registrata con i suoi parametri, per l'interconnessione richiesta da Industria 4.0.",
+                "url": "https://threepoints.dev/clienti/mpart/",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "inLanguage": "it-IT",
+                "datePublished": "2026-11-21",
+                "author": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "publisher": {
+                    "@id": "https://threepoints.dev/#organization"
+                },
+                "about": {
+                    "@type": "Organization",
+                    "name": "MPART"
+                },
+                "keywords": "Industria 4.0, interconnessione, OPC UA, PLC Siemens S7-1200, termosaldatrice, tracciabilità della produzione, software su misura, Python, FastAPI, SQLite"
+            },
+            {
+                "@type": [
+                    "ProfessionalService",
+                    "LocalBusiness"
+                ],
+                "@id": "https://threepoints.dev/#organization",
+                "name": "Threepoints",
+                "url": "https://threepoints.dev/",
+                "email": "info@threepoints.dev",
+                "image": "https://threepoints.dev/images/ogimage.png",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Via Lunense 23B",
+                    "postalCode": "54033",
+                    "addressLocality": "Marina di Carrara",
+                    "addressRegion": "MS",
+                    "addressCountry": "IT"
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://threepoints.dev/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Clienti",
+                        "item": "https://threepoints.dev/#clienti"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "MPART",
+                        "item": "https://threepoints.dev/clienti/mpart/"
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- Font ospitati in locale: nessuna richiesta bloccante verso domini esterni -->
+    <link rel="preload" href="/fonts/roboto-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/material-symbols.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 300 900;
+            font-stretch: 100%;
+            font-display: swap;
+            src: url(/fonts/roboto-latin.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+            font-family: 'Material Symbols Outlined';
+            font-style: normal;
+            font-weight: 400;
+            font-display: block;
+            src: url(/fonts/material-symbols.woff2) format('woff2');
+        }
+
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+
+    <!-- CSS di base (in index.html è inline insieme alla schermata di caricamento) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+        }
+    </style>
+
+    <link rel="stylesheet" href="/styles.min.css">
+    <script defer src="/script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <strong>
+                    <a href="/"><img src="/images/logo-mark.svg" alt="" class="logo-mark" width="28" height="30" />THREEPOINTS</a>
+                </strong>
+            </div>
+            <div class="menu-desktop">
+                <a href="/#siamo">Siamo</a>
+                <a href="/#facciamo">Facciamo</a>
+                <a href="/#clienti">Clienti</a>
+                <a href="/#dove">Dove</a>
+                <a href="/#contattaci">Contattaci</a>
+            </div>
+            <div class="menu-mobile">
+                <button class="menu-toggle" id="menu-toggle" aria-label="Apri il menu">
+                    <span class="material-symbols-outlined" style="color: white;">menu</span>
+                </button>
+            </div>
+        </div>
+        <div class="menu-mobile-items" id="mobile-menu">
+            <button class="close-menu" id="close-menu" aria-label="Chiudi il menu">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <a href="/#siamo">Siamo</a>
+            <a href="/#facciamo">Facciamo</a>
+            <a href="/#clienti">Clienti</a>
+            <a href="/#dove">Dove</a>
+            <a href="/#contattaci">Contattaci</a>
+
+            <div class="menu-mobile-footer" id="menu-mobile-footer">
+                <p>© All Rights Reserved.</p>
+                <p>THREEPOINTS di Andrea Poggi.</p>
+                <p><a href="mailto:info@threepoints.dev">info@threepoints.dev</a></p>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-v2 hero-v2-local">
+        <div class="hero-v2-inner">
+            <div class="hero-v2-copy">
+                <nav class="hero-v2-eyebrow" data-in="fade" aria-label="Breadcrumb">
+                    <span class="hero-v2-pulse" aria-hidden="true"></span>
+                    <a href="/">Home</a> › <a href="/#clienti">Clienti</a> › MPART
+                </nav>
+
+                <h1>
+                    <span class="hero-v2-title">
+                        <span class="line"><span data-in="line">La saldatrice, in rete<span class="tp-dots"
+                                    aria-hidden="true"><i></i><i></i><i></i></span></span></span>
+                    </span>
+                </h1>
+
+                <p class="hero-v2-lead" data-in="fade">Per MPART, che realizza tappezzerie e coperture in PVC per
+                    yacht, abbiamo collegato la termosaldatrice al server aziendale: le commesse partono
+                    dall'ufficio e ogni saldatura torna indietro con i suoi parametri, come chiede l'Industria 4.0.</p>
+
+                <div class="hero-v2-actions" data-in="fade">
+                    <a class="hero-v2-btn primary"
+                        href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Interconnessione%20Industria%204.0">Hai una macchina da collegare? Parliamone</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <!-- In breve: scheda del progetto e numeri principali -->
+    <section class="section case-summary">
+        <div class="section-inner">
+            <div class="case-facts" id="mpart">
+                <div class="case-facts-logo">
+                    <span class="wordmark" aria-hidden="true">MPART</span>
+                </div>
+                <dl>
+                    <div>
+                        <dt>Settore</dt>
+                        <dd>Nautica: tappezzerie e coperture in PVC</dd>
+                    </div>
+                    <div>
+                        <dt>Durata</dt>
+                        <dd>Circa tre settimane, dall'analisi all'installazione</dd>
+                    </div>
+                    <div>
+                        <dt>Team</dt>
+                        <dd>Andrea Poggi</dd>
+                    </div>
+                    <div>
+                        <dt>Il nostro ruolo</dt>
+                        <dd>Analisi del PLC, sviluppo, prove in macchina e installazione</dd>
+                    </div>
+                </dl>
+            </div>
+
+            <ul class="case-stats">
+                <li class="stat">
+                    <strong>23</strong>
+                    <span>variabili del PLC lette e scritte via OPC UA</span>
+                </li>
+                <li class="stat">
+                    <strong>16</strong>
+                    <span>tipi di allarme registrati, con inizio, fine e durata</span>
+                </li>
+                <li class="stat">
+                    <strong>63</strong>
+                    <span>test automatici, più un simulatore della saldatrice</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">Il contesto<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <p class="big">MPART salda il PVC delle sue tappezzerie e coperture con una termosaldatrice
+                    industriale, governata da un PLC Siemens S7-1200.</p>
+                <p>Per accedere alle <strong>agevolazioni Industria 4.0</strong> non basta che la macchina sia
+                    predisposta: deve essere <strong>interconnessa</strong> al sistema informatico dell'azienda,
+                    ricevere da lì le istruzioni di lavoro e restituire i dati di produzione. È uno dei punti che il
+                    perito verifica.</p>
+                <p>Il PLC poteva esporre i suoi dati via OPC UA, ma <strong>nessun programma li usava</strong>: le
+                    commesse si impostavano sul pannello della macchina e quello che succedeva in produzione non
+                    lasciava traccia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">La sfida<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <ul class="checklist">
+                    <li><span><strong>Un protocollo da ricostruire.</strong> Il PLC esponeva i nomi delle variabili,
+                            non il modo di usarle: la sequenza per inviare e chiudere una commessa andava capita e
+                            concordata con chi ha programmato la macchina.</span></li>
+                    <li><span><strong>La produzione non si ferma.</strong> Il software doveva arrivare alla macchina
+                            vera già pronto e provato, senza tenerla occupata per giorni.</span></li>
+                    <li><span><strong>Il pannello resta dell'operatore.</strong> Il software non deve mai poter
+                            toccare i comandi della macchina: può scrivere solo i dati della commessa.</span></li>
+                    <li><span><strong>Nessuna saldatura persa.</strong> Se la rete cade o il server si riavvia, i
+                            dati di produzione devono ritrovarsi al ritorno.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section dark has-grid">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">L'approccio<span class="accent">.</span></h2>
+                <p class="section-lead">Sviluppare <strong>senza fermare la macchina</strong>: il software è stato
+                    scritto e provato su una saldatrice simulata, poi verificato su quella vera.</p>
+            </div>
+
+            <ol class="steps">
+                <li>
+                    <span class="step-num">01</span>
+                    <h3>Studio del PLC</h3>
+                    <p>Dai blocchi dati del PLC abbiamo ricavato le variabili da leggere e scrivere e il
+                        significato di ogni allarme.</p>
+                </li>
+                <li>
+                    <span class="step-num">02</span>
+                    <h3>Simulatore</h3>
+                    <p>Una saldatrice finta, con la stessa struttura OPC UA del PLC Siemens: lavora le commesse,
+                        genera allarmi e saldature fuori tolleranza.</p>
+                </li>
+                <li>
+                    <span class="step-num">03</span>
+                    <h3>Protocollo con il costruttore</h3>
+                    <p>Domande puntuali a chi ha programmato la macchina, per fissare come si invia una commessa e
+                        come si conferma la fine del lavoro tra PC e PLC.</p>
+                </li>
+                <li>
+                    <span class="step-num">04</span>
+                    <h3>Prove in macchina</h3>
+                    <p>Prima in sola lettura, poi con commesse vere. Lì è emerso, per esempio, che il
+                        «contapezzi» del PLC in realtà conta le saldature.</p>
+                </li>
+                <li>
+                    <span class="step-num">05</span>
+                    <h3>Installazione</h3>
+                    <p>Un pacchetto che contiene già tutto, installato sul server aziendale senza bisogno di
+                        internet. Il programma parte da solo all'accensione.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">La soluzione<span class="accent">.</span></h2>
+                <p class="section-lead">Un software sul server aziendale fa da ponte tra la saldatrice e
+                    <strong>chiunque in azienda abbia un browser</strong>.</p>
+            </div>
+
+            <figure class="arch" aria-label="Schema della soluzione">
+                <div class="arch-layer services">
+                    <p class="arch-label">Interfaccia web</p>
+                    <ul class="arch-items">
+                        <li class="arch-item">Cruscotto<small>stato della macchina in tempo reale</small></li>
+                        <li class="arch-item">Commesse<small>creazione, invio alla macchina, storico</small></li>
+                        <li class="arch-item">Processo e allarmi<small>grafici, tolleranze, storico degli allarmi</small></li>
+                    </ul>
+                </div>
+                <div class="arch-layer">
+                    <p class="arch-label">Server</p>
+                    <ul class="arch-items">
+                        <li class="arch-item poc">Software di collegamento<small>commesse, pezzi e saldature, controllo del processo</small></li>
+                        <li class="arch-item">Archivio<small>commesse, saldature, allarmi, eventi</small></li>
+                    </ul>
+                </div>
+                <div class="arch-layer bus">
+                    <p class="arch-label">Protocollo</p>
+                    <ul class="arch-items">
+                        <li class="arch-item">OPC UA<small>alla macchina commessa e parametri, dalla macchina stato, saldature e allarmi</small></li>
+                    </ul>
+                </div>
+                <div class="arch-layer external">
+                    <p class="arch-label">Macchina</p>
+                    <ul class="arch-items">
+                        <li class="arch-item">PLC Siemens S7-1200<small>server OPC UA integrato</small></li>
+                        <li class="arch-item">Pannello operatore<small>resta com'è: il software non lo tocca</small></li>
+                    </ul>
+                </div>
+                <figcaption>Vista semplificata dell'architettura.</figcaption>
+            </figure>
+
+            <div class="arch-notes">
+                <div>
+                    <h3>Scrive solo ciò che deve</h3>
+                    <p>Nel PLC il software può scrivere solo i dati della commessa e i segnali di inizio e fine
+                        previsti dal protocollo. Ogni altra scrittura è bloccata nel codice, non solo nascosta
+                        nell'interfaccia.</p>
+                </div>
+                <div>
+                    <h3>Ogni saldatura ha la sua scheda</h3>
+                    <p>Per ogni saldatura si registrano i tempi e la corrente usati davvero, anche se l'operatore
+                        li cambia dal pannello a commessa in corso.</p>
+                </div>
+                <div>
+                    <h3>La rete può cadere</h3>
+                    <p>Il software si riconnette da solo e recupera pezzi e saldature fatti nel frattempo. Se
+                        intanto la commessa è finita, la macchina ne tiene i dati finché il software non li ha
+                        letti.</p>
+                </div>
+                <div>
+                    <h3>Tutto resta in azienda</h3>
+                    <p>Nessun servizio cloud: programma e archivio stanno sul server aziendale, e anche i grafici
+                        funzionano senza internet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section tone-2">
+        <div class="section-inner split">
+            <div class="section-head">
+                <h2 class="section-title">I risultati<span class="accent">.</span></h2>
+            </div>
+
+            <div class="prose">
+                <ul class="checklist">
+                    <li>Il software è installato sul server aziendale e collegato alla saldatrice.</li>
+                    <li>Le commesse partono dall'ufficio: codice, quantità e parametri arrivano in macchina, che li
+                        usa dal primo pezzo.</li>
+                    <li>Commesse, saldature e allarmi restano in archivio, si consultano da browser e si esportano
+                        in CSV per Excel.</li>
+                    <li>Una descrizione tecnica del software, con schema a blocchi e dati raccolti, è pronta per la
+                        perizia Industria 4.0.</li>
+                    <li>Prossimo passo: il controllo della corrente misurata, saldatura per saldatura, con le
+                        tolleranze decise insieme a chi conosce il processo.</li>
+                </ul>
+
+                <div class="badges">
+                    <span class="badge">Python</span>
+                    <span class="badge">OPC UA</span>
+                    <span class="badge">Siemens S7-1200</span>
+                    <span class="badge">FastAPI</span>
+                    <span class="badge">SQLite</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact">
+        <div class="section-inner">
+            <div class="section-head">
+                <h2 class="section-title">Hai una macchina da mettere in rete<span class="accent">?</span></h2>
+                <p class="section-lead">Raccontaci che macchine hai e come lavori oggi: verifichiamo insieme cosa
+                    serve per collegarle al tuo sistema aziendale, senza impegno.</p>
+            </div>
+
+            <div class="contact-actions">
+                <a class="btn primary"
+                    href="mailto:info@threepoints.dev?subject=Richiesta%20consulenza%20-%20Interconnessione%20Industria%204.0">Richiedi una consulenza</a>
+                <a class="contact-mail" href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-brand">THREEPOINTS<span aria-hidden="true">.</span></p>
+                <address>
+                    THREEPOINTS di Andrea Poggi<br>
+                    Via Lunense 23B, 54033 Marina di Carrara (MS)<br>
+                    P.IVA 01480960457<br>
+                    <a href="mailto:info@threepoints.dev">info@threepoints.dev</a>
+                </address>
+            </div>
+            <nav aria-label="Sezioni">
+                <p class="footer-heading">Sito</p>
+                <ul>
+                <li><a href="/#siamo">Siamo</a></li>
+                <li><a href="/#facciamo">Facciamo</a></li>
+                <li><a href="/#clienti">Clienti</a></li>
+                <li><a href="/#dove">Dove operiamo</a></li>
+                <li><a href="/#contattaci">Contattaci</a></li>
+                </ul>
+            </nav>
+            <nav aria-label="Zone servite">
+                <p class="footer-heading">Zone servite</p>
+                <ul>
+                <li><a href="/consulenza-informatica-massa-carrara/">Consulenza informatica Massa-Carrara</a></li>
+                <li><a href="/consulenza-informatica-la-spezia/">Consulenza informatica La Spezia</a></li>
+                <li><a href="/consulenza-informatica-lucca/">Consulenza informatica Lucca</a></li>
+                <li><a href="/consulenza-informatica-pisa/">Consulenza informatica Pisa</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>© All Rights Reserved.</p>
+            <p>Consulenza informatica e sviluppo software</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
