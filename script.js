@@ -60,6 +60,12 @@ function setupSectionReveal() {
         return;
     }
 
+    // Si attiva al primo scroll: chi non scorre la pagina (come il renderer dei
+    // motori di ricerca) deve vedere tutto il contenuto, non blocchi a opacità 0
+    window.addEventListener('scroll', () => requestAnimationFrame(armSectionReveal), { once: true, passive: true });
+}
+
+function armSectionReveal() {
     // Si nasconde solo ciò che è ancora sotto lo schermo: quello già visibile resta com'è
     const items = [...document.querySelectorAll(SECTION_ITEMS)]
         .filter(el => el.getBoundingClientRect().top > window.innerHeight);
